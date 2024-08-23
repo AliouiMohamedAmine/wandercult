@@ -2,9 +2,9 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const flash = require("connect-flash");
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
+const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
@@ -64,9 +64,10 @@ app.use(
     secret: "yourSecretKey",
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 600000 },
   })
 );
+
+app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -172,7 +173,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("login", { error: null });
+  const error = req.flash('error');
+  res.render("login", { error });
 });
 
 app.get("/signup", (req, res) => {
