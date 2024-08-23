@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 9vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.icon {
+  width: 30px;
+  cursor: pointer;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+.logotext {
+  width: 150px;
+}
+
+.search {
+  border: 1px solid #c9c9c9;
+  padding: 9px 20px;
+  border-radius: 7px;
+  position: absolute;
+  right: 6%;
+  font-family: poppins;
+  font-size: 13px;
+  width: 250px;
+  height: 35px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+  right: 1%;
+}
+.icon-searcher {
+  position: absolute;
+  right: 7%;
+  width: 25px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.5;
+}
+.search:focus {
+  outline: none;
+  border: 1px solid #40c057;
+}
+container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  position: relative;
+  left: 15%;
+  top: 9vh;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9vh;
+  width: 15%;
+  height: 91vh;
+
+  position: fixed;
+}
+
+.left ul {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  font-size: 12px;
+  align-items: start;
+}
+
+.left ul li {
+  margin: 20px 0;
+  list-style: none;
+}
+.left ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.left ul img {
+  scale: 0.6;
+  display: inline;
+  opacity: 0.7;
+}
+
+.left span {
+  width: 100%;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  flex-direction: row;
+  gap: -50px;
+  cursor: pointer;
+}
+.left span:hover {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+.left .first {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.line1 {
+  width: 90%;
+  margin-left: 2px;
+  height: 1px;
+  background-color: #dcdcdc;
+  margin-top: 2px;
+}
+
+.info {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 1%;
+  left: 10px;
+  font-family: poppins;
+  font-size: 11px;
+}
+
+.info a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.ul2 {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+}
+
+.right .account {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  gap: 30px;
+  font-family: "Poppins", sans-serif;
+}
+.right h3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+.part1 {
+  border: none;
+  padding: 10px 0;
+  border-bottom: 1px gray solid;
+}
+.right .part1 .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.right .part1 .text {
+  font-size: 12px;
+}
+.right .part1 a {
+  font-size: 12px;
+}
+.right .part1 .general {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 25px;
+}
+.right .part1 .general p {
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.right .part1 .general .bloc {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.right .part1 .general .bloc .type {
+  font-size: 15px;
+  width: 200px;
+}
+.right .part1 .general .bloc .titre {
+  font-size: 13px;
+  margin-left: -25px;
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #9fccfa;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  width: 15px;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #0974f1;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1em);
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="savedpage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/api/saved-cities")
+          .then((response) => response.json())
+          .then((data) => {
+            const container = document.getElementById("right");
+            data.forEach((city) => {
+              container.innerHTML += `
+              <div class="card">
+                <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${city.title}', '${city.admin_name}', '${city.population}', '${city.image}', '${city.description}', '${city.arnaques}')"/>
+                <div class="cardText">
+                  <h2>${city.title}</h2>
+                  <p>${city.admin_name}</p>
+                </div>
+                <button onclick="unsaveCity('${city.title}')">Unsave</button>
+              </div>
+            `;
+            });
+          })
+          .catch((error) =>
+            console.error("Error fetching saved cities:", error)
+          );
+      });
+    </script>
+    <script src="card.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="assets/images/logo.png" alt="logo" class="logo" />
+        <img src="assets/images/logoText.png" alt="logoText" class="logotext" />
+        <img
+          src="assets/images/search.png"
+          alt="search"
+          class="icon icon-searcher"
+          onclick="performSearch()"
+        />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search places"
+          class="search"
+        />
+        <img
+          src="assets/images/firefly.jpg"
+          id="profile-button"
+          alt="avatar"
+          class="avatar"
+        />
+      </header>
+      <container>
+        <div class="left">
+          <ul>
+            <span>
+              <img
+                src="assets/images/home.png"
+                alt="home"
+                class="icon home-icon"
+              />
+              <li><a href="/home">Home</a></li>
+            </span>
+            <span>
+              <img
+                src="assets/images/old-phone_11552945.png"
+                alt="advice"
+                class="icon discover-icon"
+              />
+              <li><a href="/help">Numbers & advise</a></li>
+            </span>
+            <span>
+              <img
+                src="assets/images/error-sign_76789.png"
+                alt="friends"
+                class="icon friends-icon"
+              />
+              <li><a href="/report">Report</a></li>
+            </span>
+            <span class="fourth">
+              <img
+                src="assets/images/saved.png"
+                alt="saved"
+                class="icon saved-icon"
+              />
+              <li><a href="/saved">Saved</a></li>
+            </span>
+          </ul>
+          <div class="line1"></div>
+          <ul class="ul2">
+            <span>
+              <img
+                src="assets/images/settings.png"
+                alt="settings"
+                class="icon settings-icon"
+              />
+              <li><a href="/settings">settings</a></li>
+            </span>
+            <span>
+              <img
+                src="assets/images/logout.png"
+                alt="logout"
+                class="icon logout-icon"
+              />
+              <li><a href="/logout">Logout</a></li>
+            </span>
+          </ul>
+          <div class="info">
+            <a href="usage_condition.html" target="_blank"
+              >Terms and services</a
+            >
+            <a href="securityTerms.html" target="_blank"> Privacy Policy</a>
+          </div>
+        </div>
+        <div id="right"></div>
+      </container>
+    </div>
+  </body>
+</html>
