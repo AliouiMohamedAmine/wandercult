@@ -181,4 +181,3 @@ document.getElementById("description").innerText = `description: ${cityInfo.desc
 document.getElementById("arnaques").innerText = `${cityInfo.arnaques}`;
 document.getElementById("cityImage").src = cityInfo.image;
 document.getElementById("cityImage").alt = cityInfo.city;
-
