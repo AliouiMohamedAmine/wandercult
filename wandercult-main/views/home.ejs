@@ -107,30 +107,127 @@
         </div>
         <div class="right">
           <div class="top">
-            <div class="banner">
+            <div class="banner" id="banner">
               <div class="bannerText">
                 <img
                   src="assets/images/left-arrow.png"
                   alt="left-arrow"
                   class="left-arrow"
+                  onclick="changePhrase('prev')"
                 />
                 <img
                   src="assets/images/right-arrow.png"
                   alt="right-arrow"
                   class="right-arrow"
+                  onclick="changePhrase('next')"
                 />
-                <h2>Discover the helm of Morocco</h2>
-                <p>Start to discover the world with us</p>
-                <div class="circle circle1"></div>
+                <h2 id="bannerPhrase">Discover the helm of Morocco</h2>
+                <p>Start to discover our country with us</p>
+                <div class="circle circle1 active"></div>
                 <div class="circle circle2"></div>
                 <div class="circle circle3"></div>
                 <div class="circle circle4"></div>
+                <div class="circle circle5"></div>
+                <div class="circle circle6"></div>
               </div>
             </div>
           </div>
+          
           <div id="bottom"></div>
         </div>
       </container>
     </div>
+
+    <script>
+      const phrases = [
+  "Discover the helm of Morocco", 
+  "Explore the beauty of Moroccan Sahara",
+  "Traverse the rolling Rif Hills", 
+  "Discover the majestic Atlas Mountains",
+  "Immerse in the tranquil Moroccan oases", 
+  "Wander the serene Moroccan coastline"
+];
+
+const images = [
+  "assets/images/morocco-helm.jpg", 
+  "assets/images/sahara.jpg", 
+  "assets/images/rif-hills.jpg", 
+  "assets/images/atlas-mountains.jpg", 
+  "assets/images/oases.jpg", 
+  "assets/images/coastline.jpg"
+];
+
+let currentPhraseIndex = 0;
+let isTransitioning = false;
+let autoChangeInterval;
+
+function changePhrase(direction) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  const bannerPhrase = document.getElementById("bannerPhrase");
+  const banner = document.getElementById("banner");
+
+  bannerPhrase.classList.add("fade-out");
+
+  setTimeout(() => {
+    if (direction === "next") {
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+    } else if (direction === "prev") {
+      currentPhraseIndex = (currentPhraseIndex - 1 + phrases.length) % phrases.length;
+    }
+
+    bannerPhrase.textContent = phrases[currentPhraseIndex];
+
+    // Update the background image
+    banner.style.backgroundImage = `url(${images[currentPhraseIndex]})`;
+
+    updateActiveCircle();
+
+    bannerPhrase.classList.remove("fade-out");
+    bannerPhrase.classList.add("fade-in");
+
+    setTimeout(() => {
+      bannerPhrase.classList.remove("fade-in");
+      isTransitioning = false;
+    }, 500);
+  }, 500);
+}
+
+function updateActiveCircle() {
+  const circles = document.querySelectorAll(".circle");
+  circles.forEach((circle, index) => {
+    if (index === currentPhraseIndex) {
+      circle.classList.add("active");
+    } else {
+      circle.classList.remove("active");
+    }
+  });
+}
+
+function startAutoChange() {
+  autoChangeInterval = setInterval(() => {
+    changePhrase('next');
+  }, 3000);
+}
+
+function stopAutoChange() {
+  clearInterval(autoChangeInterval);
+}
+
+window.onload = () => {
+  startAutoChange();
+  document.getElementById("banner").style.backgroundImage = `url(${images[0]})`;
+};
+
+document.querySelectorAll('.left-arrow, .right-arrow').forEach(button => {
+  button.addEventListener('click', () => {
+    stopAutoChange();
+    startAutoChange();
+  });
+});
+
+
+    </script>
   </body>
 </html>
