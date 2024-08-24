@@ -88,23 +88,25 @@
         </div>
         <div class="right">
         <section id="targetSection">
-          <div class="form-container">
+          <form>
+            <div class="form-container">
               <div class="form-row">
-                  <label for="destination">City</label>
-                  <input type="text" id="destination" name="city">
+                <label for="destination">City</label>
+                <input type="text" id="destination" name="city" required/>
               </div>
               <div class="form-row">
-                  <label for="lot">Neighborhood</label>
-                  <input type="text" id="lot" name="neighborhood">
+                <label for="lot">Neighborhood</label>
+                <input type="text" id="lot" name="neighborhood" required/>
               </div>
               <div class="form-row">
-                  <label for="description">Description of your scam</label>
-                  <input type="text" id="description" name="description">
+                <label for="description">Description of your scam</label>
+                <input type="text" id="description" name="description" required/>
               </div>
               <div class="form-row">
-                  <button type="submit" id="saveButton">Save</button>
+                <button type="submit" id="saveButton">Save</button>
               </div>
-          </div>
+            </div>
+          </form>          
       </section>
     </div>
     </div>
