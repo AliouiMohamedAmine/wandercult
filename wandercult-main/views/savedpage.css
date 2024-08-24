@@ -20,6 +20,7 @@ header {
   align-items: center;
   padding: 0 20px;
   z-index: 1;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 .icon {
@@ -81,12 +82,13 @@ container {
   position: relative;
   left: 15%;
   top: 9vh;
-  background-color: #ffffff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 5px 10px;
 }
-
+body{
+  background-image: url(images/duplo24.jpg);
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -154,7 +156,7 @@ container {
   margin-top: 9vh;
   width: 15%;
   height: 91vh;
-
+  background-color: #ffffff;
   position: fixed;
 }
 
