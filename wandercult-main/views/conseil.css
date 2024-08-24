@@ -5,7 +5,9 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: "Poppins", sans-serif;
 }
-
+body{
+  background-image: url('images/duplo24.jpg');
+}
 .conseil h1 {
   color: #333;
   font-size: 24px;
@@ -54,6 +56,7 @@ header {
   align-items: center;
   padding: 0 20px;
   z-index: 1;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 .icon {
@@ -117,7 +120,6 @@ container {
   position: relative;
   left: 15%;
   top: 9vh;
-  background-color: #ffffff;
 }
 
 .top {
@@ -161,6 +163,9 @@ container {
   color: #111111;
   margin-top: -5px;
   font-family: poppins;
+}
+.left{
+  background-color: white;
 }
 .left-arrow {
   width: 20px;
