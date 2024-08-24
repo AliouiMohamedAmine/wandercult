@@ -9,9 +9,9 @@
     "capital": "admin",
     "population": "3499000",
     "population_proper": "3499000",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/casablanca.webp",
     "description": " Casablanca, Morocco's bustling economic hub, is a vibrant city blending modernity with traditional charm. Nestled along the Atlantic coast, it boasts a mix of colonial and contemporary architecture, with landmarks like the Hassan II Mosque showcasing stunning Moorish design. The city's sprawling beaches and lively medina offer both relaxation and a taste of Moroccan culture. Casablanca is also known for its rich history as a key port and trade center.",
-    "arnaques" : "some arnaques in the city"
+    "arnaques": "some arnaques in the city"
   },
   {
     "city": "Fès",
@@ -23,9 +23,9 @@
     "capital": "admin",
     "population": "1112072",
     "population_proper": "1112072",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/fes.webp",
     "description": "Fès, a historical gem in Morocco, is renowned for its well-preserved medieval architecture and vibrant cultural heritage. Located in the Fès-Meknès region, the city is home to one of the world's oldest universities, the University of Al Quaraouiyine. Its labyrinthine medina, filled with traditional souks and ancient madrasas, reflects Fès's significance as a center of learning and spirituality.",
-    "arnaques" : "some arnaques in the city"
+    "arnaques": "some arnaques in the city"
   },
   {
     "city": "Marrakech",
@@ -37,9 +37,9 @@
     "capital": "admin",
     "population": "966987",
     "population_proper": "966987",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/marrakech.webp",
     "description": "Marrakech, known as the Red City, captivates with its vibrant colors and rich history. Situated at the foothills of the Atlas Mountains, it is famous for its historic medina, lively souks, and architectural marvels like the Koutoubia Mosque. The city's lush gardens, including the Jardin Majorelle, and the bustling Djemaa el-Fna square offer an immersive experience in Moroccan culture and tradition.",
-    "arnaques" : "some arnaques in the city"
+    "arnaques": "some arnaques in the city"
   },
   {
     "city": "Tangier",
@@ -51,9 +51,9 @@
     "capital": "admin",
     "population": "947952",
     "population_proper": "947952",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/card-image1.webp",
     "description": "Tangier, located on the northern coast of Morocco, is a city where diverse cultures converge. Overlooking the Strait of Gibraltar, Tangier has long been a melting pot of cultures and influences, from its historic medina to its modern port. Visitors can explore its vibrant arts scene, historic forts, and enjoy stunning views of both the Atlantic Ocean and the Mediterranean Sea.",
-    "arnaques" : "some arnaques in the city"
+    "arnaques": "some arnaques in the city"
   },
   {
     "city": "Sale",
@@ -65,9 +65,9 @@
     "capital": "",
     "population": "850403",
     "population_proper": "850403",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/sale.webp",
     "description": "Sale, adjacent to Rabat, is known for its rich history and cultural significance. Located on the Atlantic coast, Sale features a charming medina with traditional architecture and a history as an important port city. The city is also renowned for its vibrant festivals and cultural heritage, offering a unique glimpse into Moroccan life.",
-    "arnaques" : "some arnaques in the city"
+    "arnaques": "some arnaques in the city"
   },
   {
     "city": "Rabat",
@@ -79,7 +79,7 @@
     "capital": "primary",
     "population": "572717",
     "population_proper": "572717",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/card-image5.png",
     "description": "Rabat, the capital city of Morocco, boasts a rich history and a vibrant cultural scene. Known for its beautiful architecture, historic sites, and lush green spaces, it serves as the political and administrative center of the country. Highlights include the majestic Hassan Tower, the tranquil Kasbah of the Udayas, and the Royal Palace. The city is also known for its bustling markets and modern amenities, making it a blend of tradition and contemporary urban life.",
     "arnaques": "some arnaques in the city"
   },
@@ -93,7 +93,7 @@
     "capital": "",
     "population": "520428",
     "population_proper": "520428",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/meknes.jpg",
     "description": "Meknès is a historic city renowned for its well-preserved imperial heritage and beautiful architecture. It was once the capital of Morocco under the reign of Sultan Moulay Ismail, and its medina is a UNESCO World Heritage site. Key attractions include the grand Bab Mansour gate, the Royal Stables, and the Moulay Ismail Mausoleum. The city is also known for its vibrant souks and traditional Moroccan crafts.",
     "arnaques": "some arnaques in the city"
   },
@@ -107,7 +107,7 @@
     "capital": "admin",
     "population": "494252",
     "population_proper": "494252",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/oujda.jfif",
     "description": "Oujda is a significant city in the eastern part of Morocco, serving as a key administrative and economic center. The city features a blend of historical and modern elements, with highlights such as the Great Mosque of Oujda and the ancient medina. Oujda is also known for its vibrant cultural festivals and as a gateway to the Algerian border.",
     "arnaques": "some arnaques in the city"
   },
@@ -121,7 +121,7 @@
     "capital": "",
     "population": "431282",
     "population_proper": "431282",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/kenitra.jfif",
     "description": "Kenitra is a bustling city located along the Atlantic coast, known for its important port and industrial activities. The city boasts modern infrastructure, a lively commercial scene, and several parks and green spaces. Key attractions include the beautiful beaches, the Kenitra Market, and the nearby scenic areas such as the Maamora Forest.",
     "arnaques": "some arnaques in the city"
   },
@@ -135,7 +135,7 @@
     "capital": "admin",
     "population": "421844",
     "population_proper": "421844",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/agadir.webp",
     "description": "Agadir is a vibrant city known for its stunning beaches, modern resorts, and year-round sunny weather. It is a popular tourist destination offering a wide range of leisure activities, from water sports to exploring the local souks. The city is also famous for its fresh seafood, beautiful marina, and the Agadir Kasbah, which provides panoramic views of the city.",
     "arnaques": "some arnaques in the city"
   },
@@ -149,134 +149,36 @@
     "capital": "",
     "population": "380787",
     "population_proper": "380787",
-    "image": "assets/images/card-image4.webp",
-    "description": "Tétouan is a culturally rich city in northern Morocco, known for its distinctive Andalusian architecture and historical medina, which is a UNESCO World Heritage site. The city features narrow streets, traditional souks, and beautiful riads. Tétouan also serves as a gateway to the Rif Mountains and offers a blend of Moroccan and Spanish influences in its culture and cuisine.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Taourirt",
-    "lat": "34.4169",
-    "lng": "-2.8850",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Oriental",
-    "capital": "",
-    "population": "321876",
-    "population_proper": "321876",
-    "image": "assets/images/card-image4.webp",
-    "description": "Taourirt is a town in the eastern region of Morocco, notable for its historical Kasbah and vibrant local markets. The town is a center for traditional crafts and offers visitors a glimpse into rural Moroccan life. Its strategic location near the Algerian border also adds to its cultural significance and accessibility.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Temara",
-    "lat": "33.9267",
-    "lng": "-6.9122",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Rabat-Salé-Kénitra",
-    "capital": "",
-    "population": "313510",
-    "population_proper": "313510",
-    "image": "assets/images/card-image4.webp",
-    "description": "Temara is a coastal town known for its beautiful beaches and relaxed atmosphere. It is a popular destination for those seeking a more tranquil alternative to the bustling capital city of Rabat. Temara offers a mix of modern amenities, traditional markets, and scenic spots along the Atlantic coast.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Safi",
-    "lat": "32.2833",
-    "lng": "-9.2333",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Marrakech-Safi",
-    "capital": "",
-    "population": "308508",
-    "population_proper": "308508",
-    "image": "assets/images/card-image4.webp",
-    "description": "Safi is a historic port city known for its rich history, vibrant ceramics industry, and beautiful coastal views. It features a mix of historical sites, including the old medina and the Royal Palace, as well as modern amenities. The city is also famous for its fish market and is a key player in Morocco's maritime trade.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Khénifra",
-    "lat": "32.9394",
-    "lng": "-5.6675",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Béni Mellal-Khénifra",
-    "capital": "",
-    "population": "228567",
-    "population_proper": "117510",
-    "image": "assets/images/card-image4.webp",
-    "description": "Khénifra is a town located in the central region of Morocco, known for its picturesque landscapes and rich cultural heritage. Surrounded by mountains and natural beauty, it offers a peaceful environment and serves as a gateway to outdoor adventures such as hiking and exploring local Berber culture.",
+    "image": "assets/images/tetouan.webp",
+    "description": "Tétouan, located in northern Morocco, is known for its historical medina, which is a UNESCO World Heritage site. The city features a mix of Andalusian and Moorish architecture, with charming narrow streets and vibrant souks. Tétouan is also recognized for its rich artistic heritage and as a center of traditional Moroccan crafts.",
     "arnaques": "some arnaques in the city"
   },
   {
     "city": "El Jadida",
-    "lat": "33.2333",
-    "lng": "-8.5000",
+    "lat": "33.2500",
+    "lng": "-8.5167",
     "country": "Morocco",
     "iso2": "MA",
     "admin_name": "Casablanca-Settat",
     "capital": "",
-    "population": "220181",
-    "population_proper": "220181",
-    "image": "assets/images/card-image4.webp",
-    "description": "El Jadida is a coastal city known for its historic Portuguese fortifications and charming seaside ambiance. The city features a well-preserved medina, historical architecture, and beautiful beaches. It is also recognized for its historic cistern and the Mazagan fortress, which are part of its UNESCO World Heritage designation.",
+    "population": "191400",
+    "population_proper": "191400",
+    "image": "assets/images/el_jadida.webp",
+    "description": "El Jadida is a coastal city known for its Portuguese heritage and historic sites. The city's medina, a UNESCO World Heritage site, features well-preserved Portuguese architecture, including the fortifications and cistern. El Jadida also offers beautiful beaches, vibrant markets, and a rich history as an important port city.",
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Laâyoune",
-    "lat": "27.1536",
-    "lng": "-13.2033",
+    "city": "Ouarzazate",
+    "lat": "30.9167",
+    "lng": "-6.8833",
     "country": "Morocco",
     "iso2": "MA",
-    "admin_name": "Laâyoune-Sakia El Hamra",
+    "admin_name": "Drâa-Tafilalet",
     "capital": "",
-    "population": "217732",
-    "population_proper": "217732",
-    "image": "assets/images/card-image4.webp",
-    "description": "Laâyoune is the largest city in Western Sahara and serves as its administrative center. It is known for its modern infrastructure, vibrant markets, and cultural diversity. The city is surrounded by desert landscapes and offers a unique blend of traditional Saharan and contemporary influences.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Mohammedia",
-    "lat": "33.6833",
-    "lng": "-7.3833",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Casablanca-Settat",
-    "capital": "",
-    "population": "208612",
-    "population_proper": "208612",
-    "image": "assets/images/card-image4.webp",
-    "description": "Mohammedia is a coastal city situated between Casablanca and Rabat, known for its beautiful beaches and maritime activities. It is a key industrial hub with modern amenities and a relaxed coastal atmosphere. The city offers a variety of recreational options, including parks, waterfront promenades, and local markets.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Khouribga",
-    "lat": "32.8833",
-    "lng": "-6.9167",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Béni Mellal-Khénifra",
-    "capital": "",
-    "population": "196196",
-    "population_proper": "196196",
-    "image": "assets/images/card-image4.webp",
-    "description": "Khouribga is a city known for its phosphate mining industry, which plays a major role in its economy. The city features a mix of modern infrastructure and traditional Moroccan elements. It is also known for its local markets and cultural events, offering visitors a glimpse into the region's industrial and cultural life.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Béni Mellal",
-    "lat": "32.3394",
-    "lng": "-6.3608",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Béni Mellal-Khénifra",
-    "capital": "admin",
-    "population": "192676",
-    "population_proper": "192676",
-    "image": "assets/images/card-image4.webp",
-    "description": "Béni Mellal is a city located in central Morocco, known for its agricultural surroundings and historical significance. The city features traditional Moroccan architecture, including old medinas and vibrant souks. It is a center for regional trade and serves as a gateway to the nearby Atlas Mountains.",
+    "population": "117234",
+    "population_proper": "117234",
+    "image": "assets/images/ouarzazate.webp",
+    "description": "Ouarzazate, often referred to as the 'Gateway to the Sahara,' is known for its stunning desert landscapes and historic kasbahs. The city serves as a major film production center, with its dramatic scenery featured in numerous films. Key attractions include the Ait Benhaddou kasbah, a UNESCO World Heritage site, and the nearby oasis and desert regions.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -287,10 +189,10 @@
     "iso2": "MA",
     "admin_name": "Oriental",
     "capital": "",
-    "population": "161726",
-    "population_proper": "161726",
-    "image": "assets/images/card-image4.webp",
-    "description": "Nador is a city in the northeastern part of Morocco, known for its proximity to the Mediterranean Sea and its role as a major port and commercial center. The city features a mix of modern amenities and traditional Moroccan charm, with local markets, historical sites, and a growing tourism industry.",
+    "population": "134146",
+    "population_proper": "134146",
+    "image": "assets/images/nador.webp",
+    "description": "Nador is a city located in northeastern Morocco, known for its economic activities and proximity to the Mediterranean Sea. The city features a mix of modern and traditional elements, with bustling markets and growing infrastructure. Nador is also recognized for its scenic coastal areas and as a gateway to the Al Hoceima National Park.",
     "arnaques": "some arnaques in the city"
   },
   {
