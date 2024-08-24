@@ -61,6 +61,10 @@ document.getElementById('saveButton').addEventListener('click', function(event) 
     const neighborhood = document.getElementById('lot').value;
     const description = document.getElementById('description').value;
 
+    if (!city || !neighborhood || !description){
+      alert("please enter data")
+    }else{
+
     fetch('/api/reports', {
         method: 'POST',
         headers: {
@@ -80,5 +84,5 @@ document.getElementById('saveButton').addEventListener('click', function(event) 
     .catch(error => {
         console.error('Error:', error);
         alert('Failed to save the report.');
-    });
+    });}
 });
