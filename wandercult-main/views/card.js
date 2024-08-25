@@ -177,7 +177,12 @@ document.getElementById(
 document.getElementById(
   "population"
 ).innerText = `Population: ${cityInfo.population}`;
-document.getElementById("description").innerText = `description: ${cityInfo.description}`;
+document.getElementById("description").innerText = ` ${cityInfo.description}`;
 document.getElementById("arnaques").innerText = `${cityInfo.arnaques}`;
 document.getElementById("cityImage").src = cityInfo.image;
 document.getElementById("cityImage").alt = cityInfo.city;
+
+
+
+
+//scams card
