@@ -1,7 +1,3 @@
-section {
-  padding: 20px;
-}
-
 /* Conteneur de formulaire */
 .form-container {
   max-width: 600px;
@@ -32,7 +28,7 @@ section {
 .form-row input[type="text"] {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 7px;
   font-size: 16px;
 }
 
@@ -69,6 +65,71 @@ section {
 .wrapper {
   display: flex;
   flex-direction: column;
+}
+body.dark-mode {
+  background-image: url(images/dark.jpg);
+  color: #ffffff;
+}
+
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+body.dark-mode .left ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .left ul li a {
+  color: #b0b0b0;
+}
+
+body.dark-mode .left span:hover {
+  background-color: #333333;
+}
+
+body.dark-mode .left .third {
+  background-color: #333333;
+}
+
+body.dark-mode .line1 {
+  background-color: #444444;
+}
+
+body.dark-mode .info {
+  color: #cccccc;
+}
+body.dark-mode .info a{
+  color: #ffffff;
+}
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
+
+body.dark-mode header,
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+body.dark-mode .right .form-container {
+  background-color: #2b2b2b;
+}
+body.dark-mode .right {
+  color: #cfcfcf;
+}
+
+body.dark-mode .right .form-row input {
+  background-color: #cfcfcf;
+}
+
+
+body.dark-mode .bannerText {
+  color: #ffffff;
 }
 
 header {
@@ -241,66 +302,7 @@ body{
   padding: 5px 10px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(18, 18, 18, 0.1);
-  cursor: pointer;
-}
 
-.card:hover {
-  box-shadow: 0 0 10px rgba(73, 73, 73, 0.3);
-  scale: 1.01;
-}
-
-.card:active {
-  scale: 1.02;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.card h2 {
-  font-family: poppins;
-  font-size: 17px;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.card p {
-  font-family: poppins;
-  font-size: 12px;
-  color: #000000;
-  margin-top: 5px;
-}
-
-.card button {
-  font-family: poppins;
-  font-size: 15px;
-  color: #ffffff;
-  background-color: #7d96af;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.card button:hover {
-  background-color: #6c7a89;
-}
 
 .left {
   display: flex;
@@ -351,7 +353,7 @@ span:hover {
   background-color: #f5f5f5;
   border-radius: 15px;
 }
-span .third {
+.third {
   background-color: #f5f5f5;
   border-radius: 10px;
 }
@@ -381,6 +383,6 @@ span .third {
 }
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }

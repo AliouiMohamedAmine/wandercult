@@ -1,5 +1,4 @@
 .conseil {
-  background-color: #f5f5f5;
   padding: 100px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -46,7 +45,104 @@ body{
   display: flex;
   flex-direction: column;
 }
+body.dark-mode {
+  background-image: url(images/dark.jpg);
+  color: #ffffff;
+}
 
+
+
+body.dark-mode .conseil h1 {
+  color: #f1f1f1; /* Couleur du titre en mode sombre */
+}
+
+body.dark-mode .conseil ol {
+  background-color: #1f1f1f; /* Fond des listes ordonnées */
+  border-radius: 10px; /* Ajouter des coins arrondis pour un look plus doux */
+  padding: 15px;
+}
+
+body.dark-mode .conseil ol li {
+  margin-bottom: 10px;
+}
+
+body.dark-mode .conseil ol li strong {
+  color: #ffcc00; /* Accentuation avec une couleur jaune doré */
+}
+
+body.dark-mode .conseil p {
+  color: #dddddd; /* Couleur plus douce pour le texte des paragraphes */
+}
+
+body.dark-mode .conseil span {
+  color: #ffcc00; /* Mettre en évidence les numéros de téléphone avec une couleur jaune doré */
+}
+
+body.dark-mode .conseil a {
+  color: #bb86fc; /* Couleur des liens en mode sombre */
+}
+
+
+
+
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+body.dark-mode .left ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .left ul li a {
+  color: #b0b0b0;
+}
+
+body.dark-mode .left span:hover {
+  background-color: #333333;
+}
+
+body.dark-mode .left .second {
+  background-color: #333333;
+}
+
+body.dark-mode .line1 {
+  background-color: #444444;
+}
+
+body.dark-mode .info {
+  color: #cccccc;
+}
+
+body.dark-mode .info a{
+  color: #ffffff;
+}
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
+
+body.dark-mode header,
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+body.dark-mode .right {
+  color: #ffffff;
+}
+body.dark-mode .right .card img{
+  border: 2px solid #ffffff;
+}
+body.dark-mode .bannerText,
+body.dark-mode .card h2,
+body.dark-mode .card p,
+body.dark-mode .card button {
+  color: #ffffff;
+}
 header {
   position: fixed;
   width: 100%;
@@ -218,66 +314,6 @@ container {
   padding: 5px 10px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(18, 18, 18, 0.1);
-  cursor: pointer;
-}
-
-.card:hover {
-  box-shadow: 0 0 10px rgba(73, 73, 73, 0.3);
-  scale: 1.01;
-}
-
-.card:active {
-  scale: 1.02;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.card h2 {
-  font-family: poppins;
-  font-size: 17px;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.card p {
-  font-family: poppins;
-  font-size: 12px;
-  color: #000000;
-  margin-top: 5px;
-}
-
-.card button {
-  font-family: poppins;
-  font-size: 15px;
-  color: #ffffff;
-  background-color: #7d96af;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.card button:hover {
-  background-color: #6c7a89;
-}
 
 .left {
   display: flex;
@@ -328,7 +364,7 @@ span:hover {
   background-color: #f5f5f5;
   border-radius: 15px;
 }
-span .second {
+.second {
   background-color: #f5f5f5;
   border-radius: 10px;
 }
@@ -358,6 +394,6 @@ span .second {
 }
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }
