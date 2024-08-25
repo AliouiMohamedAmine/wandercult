@@ -46,7 +46,18 @@ body.dark-mode .info {
   color: #cccccc;
 }
 
+body.dark-mode .info a{
+  color: #ffffff;
+}
 
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
 body.dark-mode header,
 body.dark-mode .right,
 body.dark-mode .left {
@@ -391,7 +402,7 @@ body{
 
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }
 

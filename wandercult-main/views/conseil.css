@@ -50,6 +50,41 @@ body.dark-mode {
   color: #ffffff;
 }
 
+
+
+body.dark-mode .conseil h1 {
+  color: #f1f1f1; /* Couleur du titre en mode sombre */
+}
+
+body.dark-mode .conseil ol {
+  background-color: #1f1f1f; /* Fond des listes ordonnées */
+  border-radius: 10px; /* Ajouter des coins arrondis pour un look plus doux */
+  padding: 15px;
+}
+
+body.dark-mode .conseil ol li {
+  margin-bottom: 10px;
+}
+
+body.dark-mode .conseil ol li strong {
+  color: #ffcc00; /* Accentuation avec une couleur jaune doré */
+}
+
+body.dark-mode .conseil p {
+  color: #dddddd; /* Couleur plus douce pour le texte des paragraphes */
+}
+
+body.dark-mode .conseil span {
+  color: #ffcc00; /* Mettre en évidence les numéros de téléphone avec une couleur jaune doré */
+}
+
+body.dark-mode .conseil a {
+  color: #bb86fc; /* Couleur des liens en mode sombre */
+}
+
+
+
+
 body.dark-mode .left {
   background-color: #1e1e1e;
   color: #cfcfcf;
@@ -67,7 +102,7 @@ body.dark-mode .left span:hover {
   background-color: #333333;
 }
 
-body.dark-mode .left .first {
+body.dark-mode .left .second {
   background-color: #333333;
 }
 
@@ -79,6 +114,17 @@ body.dark-mode .info {
   color: #cccccc;
 }
 
+body.dark-mode .info a{
+  color: #ffffff;
+}
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
 
 body.dark-mode header,
 body.dark-mode .left {
@@ -408,6 +454,6 @@ span .second {
 }
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }

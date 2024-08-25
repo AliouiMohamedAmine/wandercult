@@ -34,7 +34,7 @@ body.dark-mode .left span:hover {
   background-color: #333333;
 }
 
-body.dark-mode .left .first {
+body.dark-mode .left .set {
   background-color: #333333;
 }
 
@@ -63,6 +63,17 @@ body.dark-mode .card h2,
 body.dark-mode .card p,
 body.dark-mode .card button {
   color: #ffffff;
+}
+body.dark-mode .info a{
+  color: #ffffff;
+}
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
 }
 
 /* Additional elements styling */
@@ -194,7 +205,7 @@ container {
   background-color: #f5f5f5;
   border-radius: 15px;
 }
-.left .first {
+.left .set {
   background-color: #f5f5f5;
   border-radius: 10px;
 }
@@ -226,7 +237,7 @@ container {
 
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }
 
@@ -334,4 +345,44 @@ container {
 
 .switch input:checked + .slider:before {
   transform: translateX(1em);
+}
+
+/* Style de base du bouton */
+#darkModeToggle {
+  padding: 5px 10px; /* Réduction du padding */
+  background-color: #4a4a4a; /* Couleur de fond initiale (gris foncé) */
+  color: #ffffff; /* Couleur du texte (blanc) */
+  border: none;
+  border-radius: 15px; /* Réduction des coins arrondis */
+  cursor: pointer;
+  font-size: 14px; /* Réduction de la taille de la police */
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
+}
+
+/* Effet hover */
+#darkModeToggle:hover {
+  background-color: #333333; /* Fond plus sombre au survol */
+}
+
+/* Style du bouton quand le mode sombre est activé */
+body.dark-mode #darkModeToggle {
+  background-color: #ffffff; /* Couleur de fond (blanc) */
+  color: #121212; /* Texte noir */
+}
+
+/* Effet hover en mode sombre */
+body.dark-mode #darkModeToggle:hover {
+  background-color: #e0e0e0; /* Fond légèrement gris au survol */
+}
+
+/* Ajouter une icône de lune pour indiquer le mode sombre */
+#darkModeToggle::before {
+  content: "🌙"; /* Icône de lune */
+  margin-right: 5px; /* Réduction de l'espace entre l'icône et le texte */
+}
+
+/* Changer l'icône en mode sombre */
+body.dark-mode #darkModeToggle::before {
+  content: "☀️"; /* Icône de soleil pour indiquer le retour au mode clair */
 }
