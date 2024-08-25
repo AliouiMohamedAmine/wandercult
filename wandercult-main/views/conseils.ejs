@@ -43,9 +43,11 @@
   onclick="performSearch()"
 />
 <input type="text" id="searchInput" placeholder="Search places" class="search" />
-        <a class="ap" href="/profile">
-          <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" />
-        </a>
+<% if (profileImagePath) { %>
+  <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
+  <% } else { %>
+    <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" />
+    <% }%>
       </header>
       <container>
         <div class="left">
