@@ -146,10 +146,120 @@
 
 
 
+
+          <div class="cardscams">
+            
+            <div class="container2">
+              <div class="card2 card-1" id="card1">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description" id="arnaques"></p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="card2 card-2" id="card2" style="display: none;">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description">Unleash your creative potential and explore new ways to express yourself. Discover the joy of creating and let your ideas flow freely.</p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="card2 card-3" id="card3" style="display: none;">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description">Discover new artistic techniques and hone your skills. Transform your ideas into captivating works of art and inspire others.</p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="card2 card-4" id="card4" style="display: none;">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description">Harness your creativity to solve problems and make a positive impact. Bring your unique ideas to life and revolutionize the world around you.</p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="card2 card-5" id="card5" style="display: none;">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description">Explore new creative avenues and find the path that ignites your passion. Unlock your true potential and let your creativity shine.</p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="card2 card-6" id="card6" style="display: none;">
+                <div class="card2-content">
+                  <h2 class="card2-title">Scams!!</h2>
+                  <p class="card2-description">Break free from limitations and let your creativity flow without boundaries. Explore new horizons and create something truly extraordinary.</p>
+                </div>
+                <div class="creative-elements">
+                  <div class="light-rays"></div>
+                  <div class="sparkles"></div>
+                  <div class="idea-bubbles"></div>
+                </div>
+              </div>
+              <div class="navigation-buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+              </div>
+            </div>
+          </div>  
+          
+            <script>
+              const cards = document.querySelectorAll('.card2');
+              const prevBtn = document.getElementById('prev');
+              const nextBtn = document.getElementById('next');
+              let currentIndex = 0;
+          
+              function showCard(index) {
+                cards.forEach((card, i) => {
+                  card.style.display = i === index ? 'block' : 'none';
+                });
+              }
+          
+              prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(currentIndex);
+              });
+          
+              nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCard(currentIndex);
+              });
+          
+              showCard(currentIndex);
+            </script>
+
+
+
+
+
+
+
+
+
         
           
-          <h1>Arnaques</h1>
-          <p id="arnaques"></p>
+          
+         
           
 
           </div>
