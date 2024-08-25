@@ -11,6 +11,13 @@
           "scale"
         ]
       }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off",
+        "listitem": "off"
+      }
     ]
   }
 }

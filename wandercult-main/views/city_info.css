@@ -550,14 +550,6 @@ image-container {
   }
 }
 
-
-
-
-
-
-
-
-/* General Styles */
 .cardscams {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -567,7 +559,7 @@ image-container {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
+
 }
 
 .navigation-buttons {

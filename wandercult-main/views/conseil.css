@@ -114,6 +114,7 @@ body.dark-mode .info {
   color: #cccccc;
 }
 
+
 body.dark-mode .info a{
   color: #ffffff;
 }
@@ -188,7 +189,6 @@ header {
   margin-right: 10px;
   position: absolute;
   right: 1%;
-  margin-top: -15px;
 }
 .icon-searcher {
   position: absolute;

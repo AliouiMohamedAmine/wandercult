@@ -52,8 +52,11 @@
   onclick="performSearch()"
 />
 <input type="text" id="searchInput" placeholder="Search places" class="search" />
-        <img src="assets/images/firefly.jpg" alt="avatar" class="avatar" />
-      </header>
+<% if (profileImagePath) { %>
+  <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
+  <% } else { %>
+    <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" />
+    <% }%>      </header>
       <container>
         <div class="left">
           <ul>
@@ -145,10 +148,8 @@
           </div>
 
 
-
-
           <div class="cardscams">
-            
+
             <div class="container2">
               <div class="card2 card-1" id="card1">
                 <div class="card2-content">
@@ -222,7 +223,7 @@
               </div>
             </div>
           </div>  
-          
+
             <script>
               const cards = document.querySelectorAll('.card2');
               const prevBtn = document.getElementById('prev');
@@ -256,11 +257,11 @@
 
 
 
+
+
+
         
-          
-          
-         
-          
+      
 
           </div>
         </div>
