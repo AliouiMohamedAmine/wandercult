@@ -18,6 +18,27 @@
 
     <link rel="stylesheet" href="settings.css" />
     <script src="card.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function() {
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          const body = document.body;
+      
+          // Check if dark mode is already enabled
+          if (localStorage.getItem('darkMode') === 'enabled') {
+              body.classList.add('dark-mode');
+          }
+      
+          darkModeToggle.addEventListener('click', function() {
+              body.classList.toggle('dark-mode');
+              if (body.classList.contains('dark-mode')) {
+                  localStorage.setItem('darkMode', 'enabled');
+              } else {
+                  localStorage.setItem('darkMode', 'disabled');
+              }
+          });
+      });
+      </script>
+      
     <title>Document</title>
   </head>
   <body>
@@ -116,6 +137,12 @@
                 <p class="text">Select push and email notifications you'd like to receive</p>
                 <div class="general">
                   <p>General</p>
+                  <div class="bloc">
+                    <div class="type">Dark mode</div>
+                    <button id="darkModeToggle">Dark Mode</button>
+                    <div class="titre">
+                      switch to dark mode</div>
+                  </div>
                   <div class="bloc">
                     <div class="type">Desktop notifications</div>
                     <label class="switch">

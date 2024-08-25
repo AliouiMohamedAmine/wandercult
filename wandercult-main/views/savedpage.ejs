@@ -17,6 +17,26 @@
     />
     <title>Document</title>
     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          const body = document.body;
+      
+          // Check if dark mode is already enabled
+          if (localStorage.getItem('darkMode') === 'enabled') {
+              body.classList.add('dark-mode');
+          }
+      
+          darkModeToggle.addEventListener('click', function() {
+              body.classList.toggle('dark-mode');
+              if (body.classList.contains('dark-mode')) {
+                  localStorage.setItem('darkMode', 'enabled');
+              } else {
+                  localStorage.setItem('darkMode', 'disabled');
+              }
+          });
+      });
+      </script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         fetch("/api/saved-cities")
           .then((response) => response.json())
@@ -93,7 +113,7 @@
               />
               <li><a href="/report">Report</a></li>
             </span>
-            <span class="fourth">
+            <span >
               <img
                 src="assets/images/saved.png"
                 alt="saved"
