@@ -17,6 +17,26 @@
     />
     <title>Document</title>
     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          const body = document.body;
+      
+          // Check if dark mode is already enabled
+          if (localStorage.getItem('darkMode') === 'enabled') {
+              body.classList.add('dark-mode');
+          }
+      
+          darkModeToggle.addEventListener('click', function() {
+              body.classList.toggle('dark-mode');
+              if (body.classList.contains('dark-mode')) {
+                  localStorage.setItem('darkMode', 'enabled');
+              } else {
+                  localStorage.setItem('darkMode', 'disabled');
+              }
+          });
+      });
+      </script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         fetch("/api/saved-cities")
           .then((response) => response.json())
@@ -25,10 +45,9 @@
             data.forEach((city) => {
               container.innerHTML += `
               <div class="card">
-                <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${city.title}', '${city.admin_name}', '${city.population}', '${city.image}', '${city.description}', '${city.arnaques}')"/>
+                <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${city.title}', '${city.adminname}', '${city.population}', '${city.image}', '${city.description}', '${city.arnques}')"/>
                 <div class="cardText">
                   <h2>${city.title}</h2>
-                  <p>${city.admin_name}</p>
                 </div>
                 <button onclick="unsaveCity('${city.title}')">Unsave</button>
               </div>
