@@ -78,12 +78,11 @@
           placeholder="Search places"
           class="search"
         />
-        <img
-          src="assets/images/firefly.jpg"
-          id="profile-button"
-          alt="avatar"
-          class="avatar"
-        />
+        <% if (profileImagePath) { %>
+          <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
+          <% } else { %>
+            <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" />
+            <% }%>
       </header>
       <container>
         <div class="left">

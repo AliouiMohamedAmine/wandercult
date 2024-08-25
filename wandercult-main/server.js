@@ -9,6 +9,19 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 require("dotenv").config();
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); // Dossier de destination des images uploadées
+  },
+  filename: function (req, file, cb) {
+    cb(null, req.user._id + "-" + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage: storage });
+
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -225,28 +238,109 @@ app.post(
 );
 
 // Apply the isAuthenticated middleware to the /home route
-app.get("/home", isAuthenticated, (req, res) => {
-  res.render("home", { username: req.user.username });
+app.get("/home", isAuthenticated, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
+
+    res.render("home", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  } catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+  }
 });
 
-app.get("/report", isAuthenticated, (req, res) => {
-  res.render("REPORT");
-});
 
-app.get("/help", isAuthenticated, (req, res) => {
-  res.render("conseils", { username: req.user.username });
-});
+app.get("/report", isAuthenticated, async(req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
 
-app.get("/settings", isAuthenticated, (req, res) => {
-  res.render("settings", { username: req.user.username });
-});
+    res.render("REPORT", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  } catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+  }
+  });
 
-app.get("/saved", isAuthenticated, (req, res) => {
-  res.render("savedpage", { username: req.user.username });
-});
+app.get("/help", isAuthenticated, async(req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
 
-app.get("/cityInfo", isAuthenticated, (req, res) => {
-  res.render("city_info", { username: req.user.username });
+    res.render("conseils", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  }catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+    }
+  });
+
+app.get("/settings", isAuthenticated, async(req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
+
+    res.render("settings", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  }catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+    }
+  });
+
+app.get("/saved", isAuthenticated, async(req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
+
+    res.render("savedpage", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  }catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+    }
+  });
+
+app.get("/cityInfo", isAuthenticated, async(req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
+
+    res.render("city_info", {
+      username: req.user.username,
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  }catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+    }
+  });
+
+app.get("/profile", isAuthenticated, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ userId: req.user._id });
+
+    res.render("profile", {
+      user: req.user,
+      profileImagePath: profile ? profile.profileImagePath : null
+    });
+  } catch (error) {
+    console.error("Erreur lors de la récupération du profil :", error);
+    res.status(500).send("Erreur lors de la récupération du profil.");
+  }
 });
 
 // Logout route
@@ -264,6 +358,16 @@ app.get("/logout", (req, res) => {
     });
   });
 });
+
+
+const profileSchema = new mongoose.Schema({
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  profileImagePath: { type: String, required: true }
+});
+
+const Profile = mongoose.model("Profile", profileSchema);
+
+module.exports = Profile;
 
 // Report schema and model
 const reportSchema = new mongoose.Schema({
@@ -308,6 +412,48 @@ app.post("/api/save-city", isAuthenticated, async (req, res) => {
     res.status(500).json({ error: "Error saving city. Please try again later." });
   }
 });
+
+
+
+
+app.post("/update-profile", isAuthenticated, async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+    const updates = { username, email };
+
+    if (password) {
+      updates.password = await bcrypt.hash(password, 10);
+    }
+
+    await User.findByIdAndUpdate(req.user._id, updates);
+    res.redirect("/profile");
+  } catch (error) {
+    console.error("Erreur lors de la mise à jour du profil :", error);
+    res.status(500).send("Erreur lors de la mise à jour du profil.");
+  }
+});
+
+
+
+
+app.post("/upload-profile-pic", isAuthenticated, upload.single("profilePic"), async (req, res) => {
+  try {
+    const profile = await Profile.findOneAndUpdate(
+      { userId: req.user._id },
+      { profileImagePath: req.file.path },
+      { new: true, upsert: true }
+    );
+
+    console.log("Chemin de l'image de profil :", req.file.path);
+    res.redirect("/profile");
+  } catch (error) {
+    console.error("Erreur lors de l'upload de la photo :", error);
+    res.status(500).send("Erreur lors de l'upload de la photo.");
+  }
+});
+
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Route to get saved cities
 app.get("/api/saved-cities", isAuthenticated, async (req, res) => {
