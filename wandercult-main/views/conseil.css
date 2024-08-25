@@ -1,5 +1,4 @@
 .conseil {
-  background-color: #f5f5f5;
   padding: 100px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -46,7 +45,58 @@ body{
   display: flex;
   flex-direction: column;
 }
+body.dark-mode {
+  background-image: url(images/dark.jpg);
+  color: #ffffff;
+}
 
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+body.dark-mode .left ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .left ul li a {
+  color: #b0b0b0;
+}
+
+body.dark-mode .left span:hover {
+  background-color: #333333;
+}
+
+body.dark-mode .left .first {
+  background-color: #333333;
+}
+
+body.dark-mode .line1 {
+  background-color: #444444;
+}
+
+body.dark-mode .info {
+  color: #cccccc;
+}
+
+
+body.dark-mode header,
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+body.dark-mode .right {
+  color: #ffffff;
+}
+body.dark-mode .right .card img{
+  border: 2px solid #ffffff;
+}
+body.dark-mode .bannerText,
+body.dark-mode .card h2,
+body.dark-mode .card p,
+body.dark-mode .card button {
+  color: #ffffff;
+}
 header {
   position: fixed;
   width: 100%;
