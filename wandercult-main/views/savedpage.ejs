@@ -45,10 +45,9 @@
             data.forEach((city) => {
               container.innerHTML += `
               <div class="card">
-                <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${city.title}', '${city.admin_name}', '${city.population}', '${city.image}', '${city.description}', '${city.arnaques}')"/>
+                <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${city.title}', '${city.adminname}', '${city.population}', '${city.image}', '${city.description}', '${city.arnques}')"/>
                 <div class="cardText">
                   <h2>${city.title}</h2>
-                  <p>${city.admin_name}</p>
                 </div>
                 <button onclick="unsaveCity('${city.title}')">Unsave</button>
               </div>
@@ -113,7 +112,7 @@
               />
               <li><a href="/report">Report</a></li>
             </span>
-            <span >
+            <span class="fourth">
               <img
                 src="assets/images/saved.png"
                 alt="saved"

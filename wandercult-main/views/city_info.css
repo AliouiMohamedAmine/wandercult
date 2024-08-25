@@ -44,11 +44,24 @@ body.dark-mode .info {
   color: #cccccc;
 }
 
+body.dark-mode .info a{
+  color: #ffffff;
+}
 
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
 body.dark-mode header,
-body.dark-mode .right,
 body.dark-mode .left {
   background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+body.dark-mode .right{
   color: #cfcfcf;
 }
 body.dark-mode .right .card{
@@ -141,22 +154,44 @@ container {
 body{
   background-image: url('images/duplo24.jpg');
 }
-.right #name-city {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: 350;
-  font-size: 40px;
+.right h1 {
+  font-size: 24px; /* Taille de police pour les titres */
+  margin-bottom: 15px; /* Espacement sous les titres */
+  border-bottom: 2px solid #ddd; /* Ligne de séparation sous les titres */
+  padding-bottom: 5px;
+  margin-left: 50px;
 }
+
+.right p {
+  line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+  margin-bottom: 15px; /* Espacement sous chaque paragraphe */
+  font-size: 16px;
+  margin-left: 30px;
+}
+
 .right img {
-  width: 70%;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
+  border-radius: 10px; /* Coins arrondis pour l'image */
+  margin-bottom: 20px; /* Espacement sous l'image */
+  width: 100%;
+  height: auto; /* Assurez-vous que l'image s'adapte correctement à la largeur */
+  margin-left: auto;
+  margin-right: auto;
 }
-.right .description {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 100px;
+
+.right #cityName {
+  font-size: 28px; /* Taille de la police pour le nom de la ville */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.right #adminName, .right #population {
+  font-weight: bold; /* Mettre en gras pour différencier les informations importantes */
+  margin-left: 90px;
+}
+
+.right h1#arnaques {
+  color: #d9534f; /* Couleur rouge pour attirer l'attention sur les arnaques */
+  margin-left: 20px;
 }
 .right .desc {
   font-size: 20px;
@@ -250,7 +285,7 @@ body{
 
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }
 .slider {

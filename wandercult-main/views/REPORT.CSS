@@ -88,7 +88,7 @@ body.dark-mode .left span:hover {
   background-color: #333333;
 }
 
-body.dark-mode .left .first {
+body.dark-mode .left .third {
   background-color: #333333;
 }
 
@@ -99,7 +99,17 @@ body.dark-mode .line1 {
 body.dark-mode .info {
   color: #cccccc;
 }
-
+body.dark-mode .info a{
+  color: #ffffff;
+}
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
 
 body.dark-mode header,
 body.dark-mode .left {
@@ -292,66 +302,7 @@ body{
   padding: 5px 10px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(18, 18, 18, 0.1);
-  cursor: pointer;
-}
 
-.card:hover {
-  box-shadow: 0 0 10px rgba(73, 73, 73, 0.3);
-  scale: 1.01;
-}
-
-.card:active {
-  scale: 1.02;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.card h2 {
-  font-family: poppins;
-  font-size: 17px;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.card p {
-  font-family: poppins;
-  font-size: 12px;
-  color: #000000;
-  margin-top: 5px;
-}
-
-.card button {
-  font-family: poppins;
-  font-size: 15px;
-  color: #ffffff;
-  background-color: #7d96af;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.card button:hover {
-  background-color: #6c7a89;
-}
 
 .left {
   display: flex;
@@ -432,6 +383,6 @@ span .third {
 }
 .ul2 {
   position: absolute;
-  bottom: 4%;
+  bottom: 10%;
   width: 100%;
 }
