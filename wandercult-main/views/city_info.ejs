@@ -46,17 +46,17 @@
         <img src="assets/images/logo.png" alt="logo" class="logo" />
         <img src="assets/images/logoText.png" alt="logoText" class="logotext" />
         <img
-  src="assets/images/search.png"
-  alt="search"
-  class="icon icon-searcher"
-  onclick="performSearch()"
-/>
-<input type="text" id="searchInput" placeholder="Search places" class="search" />
-<% if (profileImagePath) { %>
-  <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
-  <% } else { %>
-    <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" />
-    <% }%>      </header>
+        src="assets/images/search.png"
+        alt="search"
+        class="icon icon-searcher"
+        onclick="performSearch()"/>
+        <input type="text" id="searchInput" placeholder="Search places" class="search" />
+        <% if (profileImagePath) { %>
+          <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
+          <% } else { %>
+            <img src="assets/images/firefly.jpg" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" />
+            <% }%>  
+          </header>
       <container>
         <div class="left">
           <ul>
@@ -248,21 +248,6 @@
           
               showCard(currentIndex);
             </script>
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      
-
           </div>
         </div>
 
