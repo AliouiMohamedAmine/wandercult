@@ -160,6 +160,7 @@ body{
   padding-bottom: 5px;
   margin-left: 50px;
   margin-right: 50px;
+  color: #ffffff;
 }
 
 .right p {
@@ -588,10 +589,13 @@ image-container {
   height: 200px;
   margin-bottom: 30px;
   animation: fadeIn 0.5s ease;
-  background-color: #f0f8ff;
+  background-color: #f9ffdc;
   align-content:center ;
 }
 
+.card2-title{
+  color: rgb(0, 89, 255);
+}
 /* Fade in animation */
 @keyframes fadeIn {
   0% {
@@ -747,10 +751,11 @@ image-container {
 
 #map {
   border-radius: 10px;
-  height: 500px;
-  width: 100%;
-  margin-top: 100px;
-  margin-left: 60px ;
-  margin-bottom: 0px ;
+  height: 300px;
+  width: 700px;
+  margin-top: 0px;
+  margin-left: 200px ;
+  margin-right: 60px;
+  margin-bottom: 60px ;
   border: 5px solid #ffffff;
 }
