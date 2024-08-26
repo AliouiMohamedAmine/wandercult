@@ -387,6 +387,8 @@ const savedCitySchema = new mongoose.Schema({
   image: String,
   description: String,
   arnques: String,
+  lat:String,
+  lng:String,
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 });
 
@@ -394,7 +396,7 @@ const SavedCity = mongoose.model("SavedCity", savedCitySchema);
 
 // Route to save city data
 app.post("/api/save-city", isAuthenticated, async (req, res) => {
-  const { title, adminname, population, image, description, arnques } = req.body;
+  const { title, adminname, population, image, description, arnques ,lat,lng} = req.body;
   try {
     const newCity = new SavedCity({
       title,
@@ -403,6 +405,8 @@ app.post("/api/save-city", isAuthenticated, async (req, res) => {
       image,
       description,
       arnques,
+      lat,
+      lng,
       user: req.user._id, // Associer l'utilisateur actuel
     });
     await newCity.save();
