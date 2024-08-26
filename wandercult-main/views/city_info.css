@@ -744,3 +744,13 @@ image-container {
       display: none;
   }
 }
+
+#map {
+  border-radius: 10px;
+  height: 500px;
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 60px ;
+  margin-bottom: 0px ;
+  border: 5px solid #ffffff;
+}
