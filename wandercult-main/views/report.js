@@ -6,41 +6,12 @@ function performSearch() {
   window.location.href = `/home?search=${encodeURIComponent(searchInput)}`;
 }
 
-function createCard(title, description) {
-  return `
-    <div class="card" onclick="goToCityInfo('${title}')">
-      <img src="assets/images/neon.avif" alt="card-image5" class="card-image" />
-      <div class="cardText">
-        <h2>${title}</h2>
-        <p>${description}</p>
-      </div>
-    </div>
-  `;
-}
 
-function goToCityInfo(title) {
-  window.location.href = `/cityInfo?city=${encodeURIComponent(title)}`;
-}
 
-function fetchCities() {
-  fetch("ma.json")
-    .then((response) => response.json())
-    .then((data) => {
-      allCities = data;
-      displayCities(allCities);
-    })
-    .catch((error) => {
-      console.error("Error fetching cities:", error);
-    });
-}
 
-function displayCities(cities) {
-  container.innerHTML = "";
-  cities.forEach((city) => {
-    const card = createCard(city.city, city.admin_name);
-    container.innerHTML += card;
-  });
-}
+
+
+
 
 function filterCities() {
   const searchInput = document.getElementById("searchInput").value.toLowerCase();
@@ -49,8 +20,6 @@ function filterCities() {
   );
   displayCities(filteredCities);
 }
-
-fetchCities();
 
 
 
