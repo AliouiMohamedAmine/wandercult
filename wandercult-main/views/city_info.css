@@ -443,41 +443,9 @@ image-container {
   overflow: hidden;
 }
 
-.brush-stroke {
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url('brush-stroke.png');
-  background-size: cover;
-  background-position: center;
-  animation: brushStroke 8s ease infinite;
-}
 
-.paint-splatter {
-  position: absolute;
-  bottom: -20%;
-  right: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url('paint-splatter.png');
-  background-size: cover;
-  background-position: center;
-  animation: paintSplatter 6s ease infinite;
-}
 
-.color-burst {
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url('color-burst.png');
-  background-size: cover;
-  background-position: center;
-  animation: colorBurst 10s ease infinite;
-}
+
 
 @keyframes brushStroke {
   0% {
@@ -670,16 +638,7 @@ image-container {
   }
 }
 
-.sparkles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('sparkles.png');
-  background-repeat: repeat;
-  animation: sparkles 5s ease infinite;
-}
+
 
 @keyframes sparkles {
   0% {
@@ -693,17 +652,6 @@ image-container {
   }
 }
 
-.idea-bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('idea-bubbles.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: bubbles 10s ease infinite;
-}
 
 @keyframes bubbles {
   0% {
