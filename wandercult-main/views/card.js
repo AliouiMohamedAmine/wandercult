@@ -16,10 +16,14 @@ function performSearch() {
   window.location.href = `/home?search=${encodeURIComponent(searchInput)}`;
 }
 
+
+
+
+
 function createCard(title, adminname, population, image, description, arnques) {
   return `
     <div class="card" >
-      <img src="assets/images/neon.avif" alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(description)}', '${escapeQuotes(arnques)}')" />
+      <img src='${escapeQuotes(image)}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(description)}', '${escapeQuotes(arnques)}')" />
       <div class="cardText">
         <h2>${escapeQuotes(title)}</h2>
         <p>${escapeQuotes(adminname)}</p>
@@ -35,6 +39,28 @@ function createCard(title, adminname, population, image, description, arnques) {
 function escapeQuotes(str) {
   return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/api/saved-cities")
+    .then((response) => response.json())
+    .then((data) => {
+      const container = document.getElementById("right");
+      data.forEach((city) => {
+        container.innerHTML += `
+        <div class="card">
+          <img src='${city.image}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(city.title)}', '${escapeQuotes(city.adminname)}', '${escapeQuotes(city.population)}', '${escapeQuotes(city.image)}', '${escapeQuotes(city.description)}', '${escapeQuotes(city.arnques)}')"/>
+          <div class="cardText">
+            <h2>${city.title}</h2>
+          </div>
+          <button onclick="unsaveCity('${city.title}')">Unsave</button>
+        </div>
+      `;
+      });
+    })
+    .catch((error) =>
+      console.error("Error fetching saved cities:", error)
+    );
+});
 
 function saveCity(
   event,
