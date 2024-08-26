@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       const container = document.getElementById("right");
+      if (!container) {
+        return;
+      }
       data.forEach((city) => {
         container.innerHTML += `
         <div class="card">
@@ -161,7 +164,12 @@ function fetchCities() {
     });
 }
 
+
+
 function displayCities(cities) {
+  if (!container) {
+    return;
+  }
   container.innerHTML = "";
   cities.forEach((city) => {
     const card = createCard(
@@ -177,6 +185,7 @@ function displayCities(cities) {
     container.innerHTML += card;
   });
 }
+
 
 function filterCities() {
   const searchInput = document
@@ -208,18 +217,26 @@ function getQueryParams() {
 // Extraire les informations de la ville
 const cityInfo = getQueryParams();
 
-// Mettre à jour le DOM avec les informations de la ville
-document.getElementById("cityName").innerText = ` ${cityInfo.city}`;
-document.getElementById(
-  "adminName"
-).innerText = `Admin Name: ${cityInfo.admin_name}`;
-document.getElementById(
-  "population"
-).innerText = `Population: ${cityInfo.population}`;
-document.getElementById("description").innerText = ` ${cityInfo.description}`;
-document.getElementById("arnaques").innerText = `${cityInfo.arnaques}`;
-document.getElementById("cityImage").src = cityInfo.image;
-document.getElementById("cityImage").alt = cityInfo.city;
+if (document.getElementById("cityName")) {
+  document.getElementById("cityName").innerText = cityInfo.city;
+}
+if (document.getElementById("adminName")) {
+  document.getElementById("adminName").innerText = `Admin Name: ${cityInfo.admin_name}`;
+}
+if (document.getElementById("population")) {
+  document.getElementById("population").innerText = `Population: ${cityInfo.population}`;
+}
+if (document.getElementById("description")) {
+  document.getElementById("description").innerText = `description: ${cityInfo.description}`;
+}
+if (document.getElementById("arnaques")) {
+  document.getElementById("arnaques").innerText = `${cityInfo.arnaques}`;
+}
+if (document.getElementById("cityImage")) {
+  document.getElementById("cityImage").src = cityInfo.image;
+  document.getElementById("cityImage").alt = cityInfo.city;
+}
+
 // Initialisation de la carte
 var map = L.map('map').setView([cityInfo.lat, cityInfo.lng], 12);
       

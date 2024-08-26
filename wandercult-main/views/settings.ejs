@@ -9,6 +9,7 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +23,6 @@
       document.addEventListener("DOMContentLoaded", function() {
           const darkModeToggle = document.getElementById('darkModeToggle');
           const body = document.body;
-      
           // Check if dark mode is already enabled
           if (localStorage.getItem('darkMode') === 'enabled') {
               body.classList.add('dark-mode');
@@ -39,7 +39,7 @@
       });
       </script>
       
-    <title>Document</title>
+    <title>settings</title>
   </head>
   <body>
     <div class="wrapper">
@@ -50,8 +50,14 @@
           src="assets/images/search.png"
           alt="search"
           class="icon icon-searcher"
+          onclick="performSearch()"
         />
-        <input type="text" placeholder="Search places" class="search" />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search places"
+          class="search"
+        />
         <% if (profileImagePath) { %>
           <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >
           <% } else { %>
