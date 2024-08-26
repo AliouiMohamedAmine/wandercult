@@ -209,7 +209,7 @@ function getQueryParams() {
 const cityInfo = getQueryParams();
 
 // Mettre à jour le DOM avec les informations de la ville
-document.getElementById("cityName").innerText = cityInfo.city;
+document.getElementById("cityName").innerText = ` ${cityInfo.city}`;
 document.getElementById(
   "adminName"
 ).innerText = `Admin Name: ${cityInfo.admin_name}`;
