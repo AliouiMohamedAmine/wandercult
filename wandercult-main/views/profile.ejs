@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
     <script src="profile.js" defer></script>
     <link rel="stylesheet" href="profile.css">
     <link
@@ -115,15 +115,15 @@
                 <form action="/update-profile" method="POST" class="profile-form">
                   <div class="form-group">
                     <label for="username"><strong>Name :</strong></label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" >
                   </div>
                   <div class="form-group">
                     <label for="email"><strong>Email :</strong></label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email">
                   </div>
                   <div class="form-group">
                     <label for="password"><strong>New password :</strong></label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required>
                   </div>
                   <button type="submit">Update</button>
                 </form>
