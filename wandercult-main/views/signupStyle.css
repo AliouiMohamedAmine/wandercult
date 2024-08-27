@@ -76,6 +76,7 @@
 .banner {
   margin-left: 50px;
   margin-top: -50px;
+  margin: auto;
 }
 
 .left {
@@ -176,7 +177,7 @@
   font-size: 600;
 }
 .list {
-  margin-top: 55px;
+  margin-top: 30px;
   display: flex;
   height: 20px;
   align-items: center;

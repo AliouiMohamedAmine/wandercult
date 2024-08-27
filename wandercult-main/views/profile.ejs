@@ -81,13 +81,13 @@
                 />
                 <li><a href="/settings">settings</a></li>
               </span>
-              <span>
+              <span class="log">
                 <img
                   src="assets/images/logout.png"
                   alt="logout"
                   class="icon logout-icon"
                 />
-                <li><a href="/logout">Logout</a></li>
+                <li><a>Logout</a></li>
               </span>
             </ul>
             <div class="info">
@@ -99,9 +99,11 @@
           </div>
           <div class="right">
             <div class="cardprof">
-              <% if (profileImagePath) { %>
-                <img src="<%= profileImagePath %>" alt="Photo de profil" width="150" class="imgprofile">
-                <% } %>
+                <% if (profileImagePath) { %>
+                  <img src="<%= profileImagePath %>" alt="Photo de profil" width="150" class="imgprofile">
+                  <% } else { %>
+                    <img src="assets/images/firefly.jpg" alt="Photo de profil" width="150" class="imgprofile" />
+                    <% }%>
               <div class="information">
                 <div class="name">
                   <p><strong>Name :</strong></p>
@@ -115,11 +117,11 @@
                 <form action="/update-profile" method="POST" class="profile-form">
                   <div class="form-group">
                     <label for="username"><strong>New Name :</strong></label>
-                    <input type="text" name="username" id="username" >
+                    <input type="text" name="username" id="username" value="<%= user.username %>" >
                   </div>
                   <div class="form-group">
                     <label for="email"><strong>New Email :</strong></label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" value="<%= user.email %>">
                   </div>
                   <div class="form-group">
                     <label for="password"><strong>New password :</strong></label>
@@ -162,6 +164,7 @@
             });
         });
         </script>
+        <script src="profile.js"></script>
     
 </body>
 </html>

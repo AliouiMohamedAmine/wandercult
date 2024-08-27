@@ -28,28 +28,7 @@
   flex-direction: column;
   align-items: center;
 }
-.accounts {
-  margin-left: 110px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
 
-.charlot {
-  width: 150px;
-  cursor: pointer;
-}
-.jacob {
-  width: 150px;
-  cursor: pointer;
-}
-.plus {
-  margin-left: 40px;
-  width: 50px;
-  cursor: pointer;
-}
 
 .logoText {
   width: 350px;
@@ -65,18 +44,11 @@
   color: #7d7d7d;
 }
 
-.acc {
-  margin-left: -180px;
-  margin-top: 50px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-}
 
 .banner {
   margin-left: 50px;
   margin-top: -50px;
+  margin-bottom: 20px;
 }
 
 .left {
@@ -88,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  margin-left: 50px;
+  margin-left: 110px;
   top: -50px;
 }
 .logo {
@@ -230,4 +202,119 @@ ul li {
 .google-icon {
   font-size: 20px;
   margin-bottom: 1px;
+}
+/* Fixed size for the accounts container */
+.accounts {
+  width: 100%;
+  max-width: 1200px; /* Maximum width for larger screens */
+  min-height: 330px; /* Increased height to contain more cards */
+  overflow-y: auto; /* Adds vertical scrollbar if content overflows */
+  margin: 0 auto; /* Center the container */
+  margin-left: 50px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards per row */
+  gap: 20px; /* Space between cards */
+}
+
+/* Styling for each account card */
+.account-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 220px; /* Set a maximum width to maintain consistency */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Add a subtle scale effect on hover */
+.account-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile section styling */
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid #00ff6e; /* Border around the image */
+}
+
+/* Account info container */
+.account-info {
+  text-align: left;
+  flex: 1;
+}
+
+/* Username styling */
+.username {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." for overflowing text */
+}
+
+/* Email styling */
+.email {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." for overflowing text */
+}
+
+/* Common button styling */
+.account-button {
+  padding: 10px 14px;
+  border: 2px solid rgb(0, 255, 110);
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 255, 110);
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* Styling for the delete button */
+.delete-button {
+  background-color: #ff4b5c;
+  color: #ffffff;
+  border-color: #ff4b5c;
+}
+
+/* Hover effect for buttons */
+.account-button:hover {
+  background-color: rgb(0, 255, 110);
+  color: #ffffff;
+  border-color: rgb(0, 255, 110);
+}
+
+/* Hover effect for the delete button */
+.delete-button:hover {
+  background-color: #e12b36;
+  border-color: #e12b36;
 }

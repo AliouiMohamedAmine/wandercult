@@ -26,6 +26,7 @@ const upload = multer({ storage: storage });
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.json());
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
@@ -343,6 +344,27 @@ app.get("/profile", isAuthenticated, async (req, res) => {
   }
 });
 
+app.get('/accounts', async (req, res) => {
+  try {
+    const users = await User.find({});
+    const profiles = await Profile.find({});
+    
+    // Combine user and profile information
+    const accounts = users.map(user => {
+      const profile = profiles.find(p => p.userId.equals(user._id)) || {};
+      return {
+        email: user.email,
+        username: user.username,
+        profileImagePath: profile.profileImagePath
+      };
+    });
+    
+    res.json(accounts);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Logout route
 app.get("/logout", (req, res) => {
   req.logout((err) => {
@@ -449,10 +471,12 @@ app.post("/upload-profile-pic", isAuthenticated, upload.single("profilePic"), as
     );
 
     console.log("Chemin de l'image de profil :", req.file.path);
-    res.redirect("/profile");
+
+    // Send back the new profile image path
+    res.json({ success: true, newProfileImagePath: req.file.path });
   } catch (error) {
     console.error("Erreur lors de l'upload de la photo :", error);
-    res.status(500).send("Erreur lors de l'upload de la photo.");
+    res.status(500).json({ success: false, message: "Erreur lors de l'upload de la photo." });
   }
 });
 
