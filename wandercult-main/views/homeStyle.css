@@ -126,6 +126,7 @@ header {
   position: absolute;
   right: 1%;
   margin-top: -2px;
+  cursor: pointer;
 }
 .icon-searcher {
   position: absolute;

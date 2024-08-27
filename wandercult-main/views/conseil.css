@@ -16,6 +16,10 @@ body{
 .conseil ol {
   list-style-type: decimal;
   padding-left: 20px;
+  -webkit-backdrop-filter: blur(30px); /* Blur effect for Safari 9+ and iOS 9+ */
+  backdrop-filter: blur(30px); /* Blur effect */
+  border: 5px solid #ffffff;
+  border-radius: 10px;
 }
 
 .conseil li {
@@ -57,9 +61,8 @@ body.dark-mode .conseil h1 {
 }
 
 body.dark-mode .conseil ol {
-  background-color: #1f1f1f; /* Fond des listes ordonnées */
-  border-radius: 10px; /* Ajouter des coins arrondis pour un look plus doux */
-  padding: 15px;
+  padding: 20px; /* Padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
 }
 
 body.dark-mode .conseil ol li {
@@ -189,6 +192,7 @@ header {
   margin-right: 10px;
   position: absolute;
   right: 1%;
+  cursor: pointer;
 }
 .icon-searcher {
   position: absolute;
