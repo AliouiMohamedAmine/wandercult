@@ -37,8 +37,7 @@ app.use(express.static(path.join(__dirname, "views")));
 
 // MongoDB connection
 mongoose.connect("mongodb://localhost:27017/auth_Wandercult", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  
   serverSelectionTimeoutMS: 30000, // 30 seconds
 });
 
@@ -410,6 +409,10 @@ const savedCitySchema = new mongoose.Schema({
   image: String,
   description: String,
   arnques: String,
+  arnques2: String,
+  arnques3: String,
+  arnques4: String,
+  arnques5: String,
   lat:String,
   lng:String,
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
@@ -419,7 +422,7 @@ const SavedCity = mongoose.model("SavedCity", savedCitySchema);
 
 // Route to save city data
 app.post("/api/save-city", isAuthenticated, async (req, res) => {
-  const { title, adminname, population, image, description, arnques ,lat,lng} = req.body;
+  const { title, adminname, population, image, description, arnques ,arnques2 ,arnques3 ,arnques4 ,arnques5 ,lat,lng} = req.body;
   try {
     const newCity = new SavedCity({
       title,
@@ -428,6 +431,10 @@ app.post("/api/save-city", isAuthenticated, async (req, res) => {
       image,
       description,
       arnques,
+      arnques2,
+      arnques3,
+      arnques4,
+      arnques5,
       lat,
       lng,
       user: req.user._id, // Associer l'utilisateur actuel
@@ -580,7 +587,7 @@ app.get("/api/reports", async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
