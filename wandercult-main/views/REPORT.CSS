@@ -387,3 +387,100 @@ span:hover {
   bottom: 10%;
   width: 100%;
 }
+
+
+
+
+
+
+/* Report Card Section */
+#reportCardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.report-card {
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.report-card-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  color: #333;
+}
+
+form {
+  position: relative;
+  z-index: 1;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-row input, .form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-row input:focus, .form-row textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+#submitButton {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#submitButton:hover {
+  background: linear-gradient(135deg, #45a049, #66bb6a);
+  transform: scale(1.05);
+}
+
+#submitButton:active {
+  background: linear-gradient(135deg, #388e3c, #5aaf5f);
+}
