@@ -121,39 +121,40 @@ function deleteAccount(email) {
     fetchAccounts(); // Refresh the displayed accounts
 }
 
-document.getElementById('loginForm').addEventListener('submit', handleFormSubmit);
+document.getElementById('profile-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
+    // Get the form data
+    const username = document.getElementById('usernamee').value;
+    const email = document.getElementById('emaill').value;
+    const password = document.getElementById('passwordd').value;
 
-document.querySelector('.profile-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-    console.log(accounts);
+    // Retrieve and update local storage
+    const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    
+    // Find the index of the account to update
+    const accountIndex = accounts.findIndex(account => account.email === userEmail);
 
-    fetch('/update-profile', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => {
-        if (response.redirected) {
-            const email = formData.get('email');
-            const password = formData.get('password');
+    // Create the updated account object
+    const updatedAccount = {
+        email: email,
+        username: username,
+        password: password, // Handle password securely in production
+    };
 
-            if (password) {
-                let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-                accounts = accounts.map(account => {
-                    if (account.email === email) {
-                        account.password = password;
-                    }
-                    return account;
-                });
-                localStorage.setItem('accounts', JSON.stringify(accounts));
-            }
-            // Redirect to the profile page
-            window.location.href = response.url;
-        }
-    })
-    .catch(error => console.error('Error updating profile:', error));
-    const emailh = formData.get('email');
-    console.log(emailh);
+    // Update or add the account in the local storage array
+    if (accountIndex > -1) {
+        // Update existing account
+        accounts[accountIndex] = updatedAccount;
+    } else {
+        // Add new account if it doesn't exist
+        accounts.push(updatedAccount);
+    }
+
+    // Store updated accounts array back to local storage
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+
+    // Optionally submit the form data to the server
+    this.submit(); // Allow the form to be submitted after updating local storage
 });
+
