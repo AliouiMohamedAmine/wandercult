@@ -454,7 +454,6 @@ app.post("/update-profile", isAuthenticated, async (req, res) => {
 
     await User.findByIdAndUpdate(req.user._id, updates);
     res.redirect("/profile");
-    
   } catch (error) {
     console.error("Erreur lors de la mise à jour du profil :", error);
     res.status(500).send("Erreur lors de la mise à jour du profil.");
@@ -472,7 +471,6 @@ app.post("/upload-profile-pic", isAuthenticated, upload.single("profilePic"), as
       { new: true, upsert: true }
     );
 
-    console.log("Chemin de l'image de profil :", req.file.path);
 
     // Send back the new profile image path
     res.json({ success: true, newProfileImagePath: req.file.path });

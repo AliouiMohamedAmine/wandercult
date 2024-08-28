@@ -72,8 +72,9 @@ async function handleFormSubmit(e) {
     const { username, profileImagePath } = getAccountInfo(accounts, email);
     
     let localAccounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    const exists = accounts.some(account => account.email === email);
     const emailExists = localAccounts.some(account => account.email === email);
-
+    if (exists){
     if (!emailExists) {
         if (confirm("Do you want to save your account for easier access next time?")) {
             const account = { email, password, profileImagePath, username };
@@ -91,6 +92,9 @@ async function handleFormSubmit(e) {
         });
         localStorage.setItem('accounts', JSON.stringify(localAccounts));
     }
+}else{
+    alert("this email doen't exists");
+}
 
     form.submit();
     console.log(accounts)

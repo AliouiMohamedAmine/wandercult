@@ -117,15 +117,15 @@
                 <form action="/update-profile" method="POST" class="profile-form" id="profile-form">
                   <div class="form-group">
                     <label for="username"><strong>New Name :</strong></label>
-                    <input type="text" name="username" id="username" value="<%= user.username %>" >
+                    <input type="text" name="username" id="usernamee" required>
                   </div>
                   <div class="form-group">
                     <label for="email"><strong>New Email :</strong></label>
-                    <input type="email" name="email" id="email" value="<%= user.email %>">
+                    <input type="email" name="email" id="emaill" required>
                   </div>
                   <div class="form-group">
                     <label for="password"><strong>New password :</strong></label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="passwordd" required>
                   </div>
                   <button type="submit">Update</button>
                 </form>
