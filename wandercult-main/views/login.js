@@ -112,11 +112,11 @@ function displayAccounts(accounts) {
     <div class="profile-section">
         <img class="profile-image" src="${account.profileImagePath || 'assets/images/firefly.jpg'}" alt="${account.email}'s profile image"/>
         <div class="account-info">
-            <p class="username">${account.username || 'Unknown'}</p>
-            <p class="email">${account.email}</p>
+            <p class="usernamee">${account.username || 'Unknown'}</p>
+            <p class="emaill">${account.email}</p>
         </div>
     </div>
-    <button class="account-button" onclick="useAccount('${account.email}', '${account.password}')">Use</button>
+    <button class="account-button" id="useButton" onclick="useAccount('${account.email}', '${account.password}')">Use</button>
     <button class="delete-button account-button" onclick="deleteAccount('${account.email}')">Delete</button>
 </div>
 
@@ -130,6 +130,7 @@ function useAccount(email, password) {
     const passwordInput = document.querySelector('input[name="password"]');
     emailInput.value = email;
     passwordInput.value = password;
+    document.getElementById('loginForm').submit();
 }
 
 function deleteAccount(email) {

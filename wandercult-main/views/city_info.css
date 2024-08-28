@@ -119,6 +119,7 @@ header {
   border-radius: 50%;
   margin-right: 10px;
   position: absolute;
+  cursor: pointer;
   right: 1%;
 }
 .icon-searcher {
