@@ -11,7 +11,11 @@
     "population_proper": "3499000",
     "image": "assets/images/casablanca.webp",
     "description": " Casablanca, Morocco's bustling economic hub, is a vibrant city blending modernity with traditional charm. Nestled along the Atlantic coast, it boasts a mix of colonial and contemporary architecture, with landmarks like the Hassan II Mosque showcasing stunning Moorish design. The city's sprawling beaches and lively medina offer both relaxation and a taste of Moroccan culture. Casablanca is also known for its rich history as a key port and trade center.",
-    "arnaques": "some arnaques in the city"
+    "arnaques":   "Fake guides: People posing as official guides offering overpriced or misleading tours.",
+    "arnaques2": "Taxi overcharge: Drivers not using the meter or taking longer routes to inflate fares.",
+    "arnaques3": "False charity donations: Scammers asking for donations to fake charities.",
+    "arnaques4":  "Overpriced restaurants: Restaurants charging higher prices than advertised or adding hidden fees.",
+    "arnaques5": "Pickpocketing: Skilled pickpockets operating in crowded areas."
   },
   {
     "city": "Fès",
@@ -25,7 +29,11 @@
     "population_proper": "1112072",
     "image": "assets/images/fes.webp",
     "description": "Fès, a historical gem in Morocco, is renowned for its well-preserved medieval architecture and vibrant cultural heritage. Located in the Fès-Meknès region, the city is home to one of the world's oldest universities, the University of Al Quaraouiyine. Its labyrinthine medina, filled with traditional souks and ancient madrasas, reflects Fès's significance as a center of learning and spirituality.",
-    "arnaques": "some arnaques in the city"
+   "arnaques": "False entry fees: Charging tourists for access to public sites that are actually free.",
+  "arnaques2": "Fake herbal remedies: Vendors selling counterfeit or ineffective herbal products.",
+  "arnaques3": "Taxi meter refusal: Drivers refusing to use meters, demanding higher fares.",
+  "arnaques4": "Fake guides: Offering unofficial and costly tours.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods sold by vendors."
   },
   {
     "city": "Marrakech",
@@ -39,7 +47,11 @@
     "population_proper": "966987",
     "image": "assets/images/marrakech.webp",
     "description": "Marrakech, known as the Red City, captivates with its vibrant colors and rich history. Situated at the foothills of the Atlas Mountains, it is famous for its historic medina, lively souks, and architectural marvels like the Koutoubia Mosque. The city's lush gardens, including the Jardin Majorelle, and the bustling Djemaa el-Fna square offer an immersive experience in Moroccan culture and tradition.",
-    "arnaques": "some arnaques in the city"
+  "arnaques": "Overpriced souvenirs: Shops charging tourists excessive prices for goods.",
+  "arnaques2": "Fake snake charmers: Overcharging for photos or performances.",
+  "arnaques3": "Taxi overcharge: Drivers refusing to use meters or taking longer routes.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Street performer scam: Charging tourists high fees for watching performances."
   },
   {
     "city": "Tangier",
@@ -53,7 +65,11 @@
     "population_proper": "947952",
     "image": "assets/images/card-image1.webp",
     "description": "Tangier, located on the northern coast of Morocco, is a city where diverse cultures converge. Overlooking the Strait of Gibraltar, Tangier has long been a melting pot of cultures and influences, from its historic medina to its modern port. Visitors can explore its vibrant arts scene, historic forts, and enjoy stunning views of both the Atlantic Ocean and the Mediterranean Sea.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake currency exchange: Offering poor rates or counterfeit money.",
+    "arnaques2": "Overpriced ferry tickets: Charging tourists inflated prices for ferry services.",
+    "arnaques3": "Taxi overcharge: Drivers not using meters and demanding high fares.",
+    "arnaques4": "Pickpocketing: Thieves targeting tourists in busy areas.",
+    "arnaques5": "Street vendor scam: Vendors inflating prices for goods."
   },
   {
     "city": "Sale",
@@ -67,7 +83,11 @@
     "population_proper": "850403",
     "image": "assets/images/sale.webp",
     "description": "Sale, adjacent to Rabat, is known for its rich history and cultural significance. Located on the Atlantic coast, Sale features a charming medina with traditional architecture and a history as an important port city. The city is also renowned for its vibrant festivals and cultural heritage, offering a unique glimpse into Moroccan life.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: People posing as official guides offering overpriced tours.",
+  "arnaques2": "Taxi overcharge: Drivers refusing to use meters or taking longer routes.",
+  "arnaques3": "False entry fees: Charging tourists for access to public sites that are free.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Street vendor scam: Vendors inflating prices for goods."
   },
   {
     "city": "Rabat",
@@ -81,7 +101,11 @@
     "population_proper": "572717",
     "image": "assets/images/card-image5.png",
     "description": "Rabat, the capital city of Morocco, boasts a rich history and a vibrant cultural scene. Known for its beautiful architecture, historic sites, and lush green spaces, it serves as the political and administrative center of the country. Highlights include the majestic Hassan Tower, the tranquil Kasbah of the Udayas, and the Royal Palace. The city is also known for its bustling markets and modern amenities, making it a blend of tradition and contemporary urban life.",
-    "arnaques": "some arnaques in the city"
+   "arnaques": "Taxi overcharge: Drivers refusing to use meters or taking longer routes.",
+  "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques3": "Overpriced restaurants: Charging tourists high prices for meals.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded spots.",
+  "arnaques5": "Street vendor scam: Vendors charging inflated prices for goods."
   },
   {
     "city": "Meknès",
@@ -95,7 +119,11 @@
     "population_proper": "520428",
     "image": "assets/images/meknes.jpg",
     "description": "Meknès is a historic city renowned for its well-preserved imperial heritage and beautiful architecture. It was once the capital of Morocco under the reign of Sultan Moulay Ismail, and its medina is a UNESCO World Heritage site. Key attractions include the grand Bab Mansour gate, the Royal Stables, and the Moulay Ismail Mausoleum. The city is also known for its vibrant souks and traditional Moroccan crafts.",
-    "arnaques": "some arnaques in the city"
+  "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and demanding higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices for handicrafts.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Ouajda",
@@ -109,7 +137,11 @@
     "population_proper": "494252",
     "image": "assets/images/ouajda.jpg",
     "description": "Oujda is a significant city in the eastern part of Morocco, serving as a key administrative and economic center. The city features a blend of historical and modern elements, with highlights such as the Great Mosque of Oujda and the ancient medina. Oujda is also known for its vibrant cultural festivals and as a gateway to the Algerian border.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake currency exchange: Offering poor rates or counterfeit money.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and demanding higher fares.",
+  "arnaques3": "Overpriced souvenirs: Shops charging excessive prices.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in busy spots.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Kenitra",
@@ -123,7 +155,11 @@
     "population_proper": "431282",
     "image": "assets/images/kenitra.jpg",
     "description": "Kenitra is a bustling city located along the Atlantic coast, known for its important port and industrial activities. The city boasts modern infrastructure, a lively commercial scene, and several parks and green spaces. Key attractions include the beautiful beaches, the Kenitra Market, and the nearby scenic areas such as the Maamora Forest.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Unlicensed guides offering unofficial tours.",
+    "arnaques2": "Taxi meter refusal: Drivers not using meters and demanding higher fares.",
+    "arnaques3": "Pickpocketing: Thieves targeting tourists in busy areas.",
+    "arnaques4": "Overpriced local crafts: Charging tourists excessive prices.",
+    "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Agadir",
@@ -137,7 +173,11 @@
     "population_proper": "421844",
     "image": "assets/images/agadir.jpg",
     "description": "Agadir is a vibrant city known for its stunning beaches, modern resorts, and year-round sunny weather. It is a popular tourist destination offering a wide range of leisure activities, from water sports to exploring the local souks. The city is also famous for its fresh seafood, beautiful marina, and the Agadir Kasbah, which provides panoramic views of the city.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced souvenirs: Shops inflating prices for tourists.",
+  "arnaques4": "Beach vendor scam: Charging inflated prices for goods and services.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Tétouan",
@@ -151,7 +191,11 @@
     "population_proper": "380787",
     "image": "assets/images/tetouan.jpg",
     "description": "Tétouan, located in northern Morocco, is known for its historical medina, which is a UNESCO World Heritage site. The city features a mix of Andalusian and Moorish architecture, with charming narrow streets and vibrant souks. Tétouan is also recognized for its rich artistic heritage and as a center of traditional Moroccan crafts.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques3": "Pickpocketing: Thieves targeting tourists in busy spots.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Fake currency exchange: Offering poor rates or counterfeit money."
   },
   {
     "city": "El Jadida",
@@ -165,7 +209,11 @@
     "population_proper": "191400",
     "image": "assets/images/eljadida.jpg",
     "description": "El Jadida is a coastal city known for its Portuguese heritage and historic sites. The city's medina, a UNESCO World Heritage site, features well-preserved Portuguese architecture, including the fortifications and cistern. El Jadida also offers beautiful beaches, vibrant markets, and a rich history as an important port city.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and demanding higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Inflated prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy spots."
   },
   {
     "city": "Ouarzazate",
@@ -179,7 +227,11 @@
     "population_proper": "117234",
     "image": "assets/images/ouarzazate.jpg",
     "description": "Ouarzazate, often referred to as the 'Gateway to the Sahara,' is known for its stunning desert landscapes and historic kasbahs. The city serves as a major film production center, with its dramatic scenery featured in numerous films. Key attractions include the Ait Benhaddou kasbah, a UNESCO World Heritage site, and the nearby oasis and desert regions.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake desert tours: Scammers offering unlicensed and overpriced tours.",
+  "arnaques2": "Overpriced souvenirs: Shops charging excessive prices.",
+  "arnaques3": "Taxi meter refusal: Drivers not using meters and demanding higher fares.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Nador",
@@ -193,7 +245,11 @@
     "population_proper": "134146",
     "image": "assets/images/nador.jpg",
     "description": "Nador is a city located in northeastern Morocco, known for its economic activities and proximity to the Mediterranean Sea. The city features a mix of modern and traditional elements, with bustling markets and growing infrastructure. Nador is also recognized for its scenic coastal areas and as a gateway to the Al Hoceima National Park.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced souvenirs: Shops inflating prices for tourists.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in busy spots.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Taza",
@@ -207,7 +263,11 @@
     "population_proper": "148456",
     "image": "assets/images/Taza.jpg",
     "description": "Taza is a city situated in the northeastern part of Morocco, surrounded by stunning mountain scenery. It is known for its historical medina, ancient ruins, and as a center for regional trade. The city offers a rich cultural experience with traditional Moroccan architecture and local festivals.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Ksar El Kebir",
@@ -221,7 +281,11 @@
     "population_proper": "126617",
     "image": "assets/images/Ksar El Kebir.jpg",
     "description": "Ksar El Kebir is a town in northern Morocco known for its historical significance and traditional Moroccan architecture. The town features a variety of historical sites, including old medinas and traditional souks. It serves as a regional center with a blend of cultural and historical attractions.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Larache",
@@ -235,7 +299,11 @@
     "population_proper": "125008",
     "image": "assets/images/Larache.jpg",
     "description": "Larache is a coastal city known for its historic medina and scenic seaside location. The city features a mix of historical landmarks, traditional Moroccan architecture, and beautiful beaches. It is also known for its cultural festivals and local cuisine, offering a charming coastal experience.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },  
   {
     "city": "Berkane",
@@ -249,7 +317,11 @@
     "population_proper": "109237",
     "image": "assets/images/Berkane.jpg",
     "description": "Berkane is a town in northeastern Morocco known for its agricultural production and vibrant local markets. It features a blend of traditional Moroccan culture and modern amenities. The town is surrounded by picturesque landscapes and is an important agricultural hub in the Oriental region.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter scam: Drivers refusing to use meters, charging higher fares.",
+    "arnaques2": "Fake guides: Unlicensed guides offering unofficial tours.",
+    "arnaques3": "Overpriced souvenirs: Shops inflating prices for tourists.",
+    "arnaques4": "Pickpocketing: Thieves targeting tourists in busy areas.",
+    "arnaques5": "Street vendor scam: Vendors charging inflated prices for goods."
   },
   {
     "city": "Dakhla",
@@ -263,7 +335,11 @@
     "population_proper": "106277",
     "image": "assets/images/Dakhla.jpg",
     "description": "Dakhla is a town located in the southern part of Western Sahara, known for its stunning coastal scenery and water sports activities. It features a mix of traditional Saharan culture and modern tourism facilities. The town is popular for its kite surfing and beautiful beaches, making it a unique destination in the region.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake kite surfing lessons: Scammers offering unqualified or overpriced lessons.",
+  "arnaques2": "Beach vendor scam: Charging inflated prices for goods and services.",
+  "arnaques3": "Taxi overcharge: Drivers refusing to use meters, charging excessive fares.",
+  "arnaques4": "Unlicensed guides: Offering unofficial and costly tours.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists while they relax."
   },
   {
     "city": "Bouskoura",
@@ -277,7 +353,11 @@
     "population_proper": "103026",
     "image": "assets/images/Bouskoura.jpg",
     "description": "Bouskoura is a suburban city located near Casablanca. It is known for its rapid development and proximity to major industrial zones. The city offers a blend of modern amenities and traditional Moroccan architecture, making it a growing hub for both residential and commercial activities.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in busy areas.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Errachidia",
@@ -291,7 +371,11 @@
     "population_proper": "92374",
     "image": "assets/images/Errachidia.jpg",
     "description": "Errachidia, located in southeastern Morocco, is a city known for its historical significance and as a gateway to the Sahara Desert. The city has a rich cultural heritage and is a vital administrative and economic center in the Drâa-Tafilalet region. Its surrounding landscapes offer stunning desert views and opportunities for adventure tourism.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake desert tours: Scammers offering unlicensed and overpriced tours.",
+  "arnaques2": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques3": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Sefrou",
@@ -305,7 +389,11 @@
     "population_proper": "79887",
     "image": "assets/images/Sefrou.jpg",
     "description": "Sefrou, situated in the Fès-Meknès region, is a city renowned for its vibrant local culture and historical significance. It is famous for its cherry festival and beautiful surroundings, including nearby waterfalls and natural parks.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+    "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+    "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Fnideq",
@@ -319,7 +407,11 @@
     "population_proper": "77436",
     "image": "assets/images/Fnideq.jpg",
     "description": "Fnidq is a coastal town in the Tanger-Tétouan-Al Hoceïma region, known for its picturesque beaches and proximity to the Mediterranean Sea. It is a popular destination for tourists seeking a relaxing seaside experience and exploring the local Moroccan culture.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques3": "Pickpocketing: Thieves targeting tourists in busy spots.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Fake currency exchange: Offering poor rates or counterfeit money."
   },
   {
     "city": "Tiznit",
@@ -333,7 +425,11 @@
     "population_proper": "74699",
     "image": "assets/images/Tiznit.jpg",
     "description": "Tiznit is a city in the Souss-Massa region, known for its traditional silver jewelry and vibrant markets. The city is a cultural and economic center, surrounded by stunning landscapes including mountains and desert areas.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Youssoufia",
@@ -347,7 +443,11 @@
     "population_proper": "67628",
     "image": "assets/images/Youssoufia.jpg",
     "description": "Youssoufia, located in the Marrakech-Safi region, is known for its phosphate industry and historical landmarks. The city offers a mix of modern industry and traditional Moroccan culture, with a focus on economic development and local heritage.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter scam: Drivers refusing to use meters, charging higher fares.",
+  "arnaques2": "Fake guides: Unlicensed guides offering unofficial tours.",
+  "arnaques3": "Overpriced souvenirs: Shops inflating prices for tourists.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in busy areas.",
+  "arnaques5": "Street vendor scam: Vendors charging inflated prices for goods."
   },
   {
     "city": "Martil",
@@ -361,7 +461,11 @@
     "population_proper": "64355",
     "image": "assets/images/Martil.jpg",
     "description": "Martil is a charming coastal town in the Tanger-Tétouan-Al Hoceïma region, known for its beautiful beaches and vibrant tourism scene. The town offers a relaxing atmosphere with plenty of recreational activities and local dining options.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques3": "Pickpocketing: Thieves targeting tourists in busy spots.",
+    "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+    "arnaques5": "Fake currency exchange: Offering poor rates or counterfeit money."
   },
   {
     "city": "Skhirate",
@@ -375,7 +479,11 @@
     "population_proper": "59775",
     "image": "assets/images/Skhirate.jpg",
     "description": "Skhirate is a town located in the Rabat-Salé-Kénitra region, known for its beautiful coastline and resort areas. It is a popular destination for both locals and tourists looking for a coastal retreat with picturesque views and high-quality amenities.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques3": "Pickpocketing: Thieves targeting tourists in busy spots.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Fake currency exchange: Offering poor rates or counterfeit money."
   },
   {
     "city": "Ouezzane",
@@ -389,7 +497,11 @@
     "population_proper": "59606",
     "image": "assets/images/Ouezzane.jpg",
     "description": "Ouezzane is a city in the Tanger-Tétouan-Al Hoceïma region, known for its historical sites and traditional Moroccan crafts. The city features a rich cultural heritage with vibrant local markets and a strong sense of community.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+    "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+    "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Al Hoceïma",
@@ -403,7 +515,11 @@
     "population_proper": "56716",
     "image": "assets/images/Al Hoceïma.jpg",
     "description": "Al Hoceïma is a coastal city in the Tanger-Tétouan-Al Hoceïma region, known for its stunning beaches and natural beauty. The city is a popular destination for tourists seeking a blend of relaxation and outdoor adventure in a picturesque setting.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "M’diq",
@@ -417,7 +533,11 @@
     "population_proper": "56227",
     "image": "assets/images/M’diq.jpg",
     "description": "M’diq is a picturesque town in the Tanger-Tétouan-Al Hoceïma region, located along the Mediterranean coast. It is known for its beautiful beaches, vibrant tourist scene, and as a popular summer destination for both locals and international visitors.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques3": "Overpriced souvenirs: Shops inflating prices for tourists.",
+    "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+    "arnaques5": "Street vendor scam: Vendors charging inflated prices for goods."
   },
   {
     "city": "Midalt",
@@ -431,7 +551,11 @@
     "population_proper": "55304",
     "image": "assets/images/Midalt.jpg",
     "description": "Midalt is a small city located in the Drâa-Tafilalet region, known for its serene environment and traditional Moroccan lifestyle. It is an important local center for agriculture and local markets, offering a glimpse into the rural life of Morocco.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Azrou",
@@ -445,7 +569,11 @@
     "population_proper": "54350",
     "image": "assets/images/Azrou.jpg",
     "description": "Azrou is a city in the Fès-Meknès region, famous for its scenic beauty and proximity to the Ifrane National Park. The city is known for its forested surroundings, local handicrafts, and as a popular spot for nature enthusiasts.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Azemmour",
@@ -459,7 +587,11 @@
     "population_proper": "40920",
     "image": "assets/images/Azemmour.jpg",
     "description": "Azemmour is a historic town located on the Atlantic coast, known for its ancient medina and architectural heritage. The town features traditional Moroccan buildings, historical sites, and beautiful coastal views.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques3": "Pickpocketing: Thieves targeting tourists in busy spots.",
+    "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+    "arnaques5": "Fake currency exchange: Offering poor rates or counterfeit money."
   },
   {
     "city": "Zagora",
@@ -473,7 +605,11 @@
     "population_proper": "40067",
     "image": "assets/images/Zagora.jpg",
     "description": "Zagora is a town in the Drâa-Tafilalet region, renowned for its proximity to the Sahara Desert. It serves as a gateway for desert excursions and offers a unique cultural experience with its traditional Moroccan architecture and desert landscapes.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake desert tours: Scammers offering unlicensed and overpriced tours.",
+  "arnaques2": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques3": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques4": "Pickpocketing: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Street vendor scam: Inflated prices for goods."
   },
   {
     "city": "Azilal",
@@ -487,7 +623,11 @@
     "population_proper": "38520",
     "image": "assets/images/Azilal.jpg",
     "description": "Aziylal is a small town in the Béni Mellal-Khénifra region, known for its beautiful landscapes and traditional Moroccan atmosphere. It is an important local center for agriculture and local markets.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake guides: Scammers offering unofficial and costly tours.",
+  "arnaques2": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+  "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+  "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+  "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "El Hajeb",
@@ -501,7 +641,11 @@
     "population_proper": "35282",
     "image": "assets/images/El Hajeb.jpg",
     "description": "El Hajeb is a town in the Fès-Meknès region, known for its historical sites and traditional Moroccan lifestyle. It is surrounded by beautiful landscapes and offers a glimpse into the region's cultural heritage.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Taxi meter refusal: Drivers not using meters and charging higher fares.",
+    "arnaques2": "Fake guides: Scammers offering unofficial and costly tours.",
+    "arnaques3": "Overpriced local crafts: Charging tourists excessive prices.",
+    "arnaques4": "Street vendor scam: Vendors inflating prices for goods.",
+    "arnaques5": "Pickpocketing: Thieves targeting tourists in busy areas."
   },
   {
     "city": "Arfoud",
@@ -515,7 +659,11 @@
     "population_proper": "29279",
     "image": "assets/images/Arfoud.jpg",
     "description": "Arfoud is a town in the Drâa-Tafilalet region, renowned for its location near the Sahara Desert. It is known for its fossil beds and as a base for desert tourism, offering unique experiences in Morocco's vast desert landscapes.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake fossil sales: Vendors selling fake fossils as authentic.",
+  "arnaques2": "Overpriced desert tours: Charging excessive fees for guided desert tours.",
+  "arnaques3": "Fake guides: Unlicensed guides offering unofficial tours.",
+  "arnaques4": "Pickpocketing in markets: Thieves targeting tourists in crowded areas.",
+  "arnaques5": "Overpriced local crafts: Charging tourists excessive prices for handicrafts."
   },
   {
     "city": "Merzouga",
@@ -529,7 +677,11 @@
     "population_proper": "Unknown",
     "image": "assets/images/Merzouga2.jpg",
     "description": "Merzouga is a small village in southeastern Morocco, known for its proximity to the Erg Chebbi dunes. It is a popular destination for tourists seeking to experience the Sahara Desert. The village offers activities such as camel trekking, sandboarding, and desert camping, providing a unique glimpse into the traditional Berber culture and the stunning desert landscape.",
-    "arnaques": "some arnaques in the city"
+    "arnaques": "Fake desert tours: Scammers offering unlicensed and overpriced desert tours.",
+  "arnaques2": "Overpriced camel rides: Charging tourists high fees for short camel rides.",
+  "arnaques3": "Pickpocketing in tourist areas: Thieves targeting tourists in busy spots.",
+  "arnaques4": "Overpriced souvenirs: Shops charging high prices for low-quality goods.",
+  "arnaques5": "Fake guides: Unlicensed guides leading tourists on unofficial tours."
   }
   
 ]
