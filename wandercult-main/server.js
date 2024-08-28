@@ -471,6 +471,7 @@ app.post("/upload-profile-pic", isAuthenticated, upload.single("profilePic"), as
       { new: true, upsert: true }
     );
 
+    console.log("Chemin de l'image de profil :", req.file.path);
 
     // Send back the new profile image path
     res.json({ success: true, newProfileImagePath: req.file.path });
