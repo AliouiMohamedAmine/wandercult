@@ -113,27 +113,29 @@
           </div>
         </div>
         <div class="right">
-        <section id="targetSection">
-          <form>
-            <div class="form-container">
-              <div class="form-row">
-                <label for="destination">City</label>
-                <input type="text" id="destination" name="city" required/>
-              </div>
-              <div class="form-row">
-                <label for="lot">Neighborhood</label>
-                <input type="text" id="lot" name="neighborhood" required/>
-              </div>
-              <div class="form-row">
-                <label for="description">Description of your scam</label>
-                <input type="text" id="description" name="description" required/>
-              </div>
-              <div class="form-row">
-                <button type="submit" id="saveButton">Save</button>
-              </div>
+          <section id="reportCardSection">
+            <div class="report-card">
+              <h2 class="report-card-title">Report a Scam</h2>
+              <form id="reportForm">
+                <div class="form-row">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" placeholder="Enter the city" required />
+                </div>
+                <div class="form-row">
+                  <label for="neighborhood">Neighborhood</label>
+                  <input type="text" id="neighborhood" name="neighborhood" placeholder="Enter the neighborhood" required />
+                </div>
+                <div class="form-row">
+                  <label for="description">Description</label>
+                  <textarea id="description" name="description" placeholder="Describe the scam" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                  <button type="submit" id="submitButton">Submit Report</button>
+                </div>
+              </form>
             </div>
-          </form>          
-      </section>
+          </section>
+          
     </div>
     </div>
       </container>
