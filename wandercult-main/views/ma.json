@@ -98,7 +98,7 @@
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Oujda",
+    "city": "Ouajda",
     "lat": "34.6867",
     "lng": "-1.9114",
     "country": "Morocco",
@@ -107,7 +107,7 @@
     "capital": "admin",
     "population": "494252",
     "population_proper": "494252",
-    "image": "assets/images/oujda.jfif",
+    "image": "assets/images/ouajda.jpg",
     "description": "Oujda is a significant city in the eastern part of Morocco, serving as a key administrative and economic center. The city features a blend of historical and modern elements, with highlights such as the Great Mosque of Oujda and the ancient medina. Oujda is also known for its vibrant cultural festivals and as a gateway to the Algerian border.",
     "arnaques": "some arnaques in the city"
   },
@@ -121,7 +121,7 @@
     "capital": "",
     "population": "431282",
     "population_proper": "431282",
-    "image": "assets/images/kenitra.jfif",
+    "image": "assets/images/kenitra.jpg",
     "description": "Kenitra is a bustling city located along the Atlantic coast, known for its important port and industrial activities. The city boasts modern infrastructure, a lively commercial scene, and several parks and green spaces. Key attractions include the beautiful beaches, the Kenitra Market, and the nearby scenic areas such as the Maamora Forest.",
     "arnaques": "some arnaques in the city"
   },
@@ -135,7 +135,7 @@
     "capital": "admin",
     "population": "421844",
     "population_proper": "421844",
-    "image": "assets/images/agadir.webp",
+    "image": "assets/images/agadir.jpg",
     "description": "Agadir is a vibrant city known for its stunning beaches, modern resorts, and year-round sunny weather. It is a popular tourist destination offering a wide range of leisure activities, from water sports to exploring the local souks. The city is also famous for its fresh seafood, beautiful marina, and the Agadir Kasbah, which provides panoramic views of the city.",
     "arnaques": "some arnaques in the city"
   },
@@ -149,7 +149,7 @@
     "capital": "",
     "population": "380787",
     "population_proper": "380787",
-    "image": "assets/images/tetouan.webp",
+    "image": "assets/images/tetouan.jpg",
     "description": "Tétouan, located in northern Morocco, is known for its historical medina, which is a UNESCO World Heritage site. The city features a mix of Andalusian and Moorish architecture, with charming narrow streets and vibrant souks. Tétouan is also recognized for its rich artistic heritage and as a center of traditional Moroccan crafts.",
     "arnaques": "some arnaques in the city"
   },
@@ -163,7 +163,7 @@
     "capital": "",
     "population": "191400",
     "population_proper": "191400",
-    "image": "assets/images/el_jadida.webp",
+    "image": "assets/images/eljadida.jpg",
     "description": "El Jadida is a coastal city known for its Portuguese heritage and historic sites. The city's medina, a UNESCO World Heritage site, features well-preserved Portuguese architecture, including the fortifications and cistern. El Jadida also offers beautiful beaches, vibrant markets, and a rich history as an important port city.",
     "arnaques": "some arnaques in the city"
   },
@@ -177,7 +177,7 @@
     "capital": "",
     "population": "117234",
     "population_proper": "117234",
-    "image": "assets/images/ouarzazate.webp",
+    "image": "assets/images/ouarzazate.jpg",
     "description": "Ouarzazate, often referred to as the 'Gateway to the Sahara,' is known for its stunning desert landscapes and historic kasbahs. The city serves as a major film production center, with its dramatic scenery featured in numerous films. Key attractions include the Ait Benhaddou kasbah, a UNESCO World Heritage site, and the nearby oasis and desert regions.",
     "arnaques": "some arnaques in the city"
   },
@@ -191,7 +191,7 @@
     "capital": "",
     "population": "134146",
     "population_proper": "134146",
-    "image": "assets/images/nador.webp",
+    "image": "assets/images/nador.jpg",
     "description": "Nador is a city located in northeastern Morocco, known for its economic activities and proximity to the Mediterranean Sea. The city features a mix of modern and traditional elements, with bustling markets and growing infrastructure. Nador is also recognized for its scenic coastal areas and as a gateway to the Al Hoceima National Park.",
     "arnaques": "some arnaques in the city"
   },
@@ -205,36 +205,8 @@
     "capital": "",
     "population": "148456",
     "population_proper": "148456",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Taza.jpg",
     "description": "Taza is a city situated in the northeastern part of Morocco, surrounded by stunning mountain scenery. It is known for its historical medina, ancient ruins, and as a center for regional trade. The city offers a rich cultural experience with traditional Moroccan architecture and local festivals.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Al Khmissat",
-    "lat": "33.8167",
-    "lng": "-6.0667",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Rabat-Salé-Kénitra",
-    "capital": "",
-    "population": "131542",
-    "population_proper": "131542",
-    "image": "assets/images/card-image4.webp",
-    "description": "Al Khmissat is a small town in the Rabat-Salé-Kénitra region, known for its traditional Moroccan atmosphere and local markets. The town is characterized by its relaxed pace of life and serves as a charming destination for visitors looking to experience authentic Moroccan culture away from the larger cities.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Inezgane",
-    "lat": "30.3658",
-    "lng": "-9.5381",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Souss-Massa",
-    "capital": "",
-    "population": "130333",
-    "population_proper": "130333",
-    "image": "assets/images/card-image4.webp",
-    "description": "Inezgane is a town located near Agadir, known for its bustling markets and traditional Moroccan ambiance. It serves as an important commercial hub with a variety of local shops, food stalls, and cultural events. The town offers a vibrant shopping experience and a taste of local life in the Souss-Massa region.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -247,7 +219,7 @@
     "capital": "",
     "population": "126617",
     "population_proper": "126617",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Ksar El Kebir.jpg",
     "description": "Ksar El Kebir is a town in northern Morocco known for its historical significance and traditional Moroccan architecture. The town features a variety of historical sites, including old medinas and traditional souks. It serves as a regional center with a blend of cultural and historical attractions.",
     "arnaques": "some arnaques in the city"
   },
@@ -261,24 +233,10 @@
     "capital": "",
     "population": "125008",
     "population_proper": "125008",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Larache.jpg",
     "description": "Larache is a coastal city known for its historic medina and scenic seaside location. The city features a mix of historical landmarks, traditional Moroccan architecture, and beautiful beaches. It is also known for its cultural festivals and local cuisine, offering a charming coastal experience.",
     "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Guelmim",
-    "lat": "28.9833",
-    "lng": "-10.0667",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Guelmim-Oued Noun",
-    "capital": "admin",
-    "population": "118318",
-    "population_proper": "118318",
-    "image": "assets/images/card-image4.webp",
-    "description": "Guelmim is a town in southern Morocco, known as the gateway to the Sahara Desert. It features traditional architecture, bustling souks, and a rich cultural heritage. The town is an important center for trade and tourism, offering visitors a unique glimpse into desert life and Berber culture.",
-    "arnaques": "some arnaques in the city"
-  },
+  },  
   {
     "city": "Berkane",
     "lat": "34.9167",
@@ -289,12 +247,12 @@
     "capital": "",
     "population": "109237",
     "population_proper": "109237",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Berkane.jpg",
     "description": "Berkane is a town in northeastern Morocco known for its agricultural production and vibrant local markets. It features a blend of traditional Moroccan culture and modern amenities. The town is surrounded by picturesque landscapes and is an important agricultural hub in the Oriental region.",
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Ad Dakhla",
+    "city": "Dakhla",
     "lat": "23.7081",
     "lng": "-15.9456",
     "country": "Morocco",
@@ -303,8 +261,8 @@
     "capital": "",
     "population": "106277",
     "population_proper": "106277",
-    "image": "assets/images/card-image4.webp",
-    "description": "Ad Dakhla is a town located in the southern part of Western Sahara, known for its stunning coastal scenery and water sports activities. It features a mix of traditional Saharan culture and modern tourism facilities. The town is popular for its kite surfing and beautiful beaches, making it a unique destination in the region.",
+    "image": "assets/images/Dakhla.jpg",
+    "description": "Dakhla is a town located in the southern part of Western Sahara, known for its stunning coastal scenery and water sports activities. It features a mix of traditional Saharan culture and modern tourism facilities. The town is popular for its kite surfing and beautiful beaches, making it a unique destination in the region.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -317,7 +275,7 @@
     "capital": "",
     "population": "103026",
     "population_proper": "103026",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Bouskoura.jpg",
     "description": "Bouskoura is a suburban city located near Casablanca. It is known for its rapid development and proximity to major industrial zones. The city offers a blend of modern amenities and traditional Moroccan architecture, making it a growing hub for both residential and commercial activities.",
     "arnaques": "some arnaques in the city"
   },
@@ -331,36 +289,8 @@
     "capital": "admin",
     "population": "92374",
     "population_proper": "92374",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Errachidia.jpg",
     "description": "Errachidia, located in southeastern Morocco, is a city known for its historical significance and as a gateway to the Sahara Desert. The city has a rich cultural heritage and is a vital administrative and economic center in the Drâa-Tafilalet region. Its surrounding landscapes offer stunning desert views and opportunities for adventure tourism.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Guercif",
-    "lat": "34.2333",
-    "lng": "-3.3667",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Oriental",
-    "capital": "",
-    "population": "90880",
-    "population_proper": "90880",
-    "image": "assets/images/card-image4.webp",
-    "description": "Guercif is a city located in the Oriental region of Morocco. Known for its agricultural activities, it is surrounded by fertile lands and is a key player in the local economy. The city features a mix of traditional Moroccan architecture and modern developments.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Ben Guerir",
-    "lat": "32.2300",
-    "lng": "-7.9500",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Marrakech-Safi",
-    "capital": "",
-    "population": "88626",
-    "population_proper": "88626",
-    "image": "assets/images/card-image4.webp",
-    "description": "Ben Guerir, located in the Marrakech-Safi region, is known for its historical importance and as a center for agricultural and industrial activities. The city has seen significant growth in recent years, with developments in infrastructure and local industries.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -373,12 +303,12 @@
     "capital": "",
     "population": "79887",
     "population_proper": "79887",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Sefrou.jpg",
     "description": "Sefrou, situated in the Fès-Meknès region, is a city renowned for its vibrant local culture and historical significance. It is famous for its cherry festival and beautiful surroundings, including nearby waterfalls and natural parks.",
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Fnidq",
+    "city": "Fnideq",
     "lat": "35.8500",
     "lng": "-5.3500",
     "country": "Morocco",
@@ -387,22 +317,8 @@
     "capital": "",
     "population": "77436",
     "population_proper": "77436",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Fnideq.jpg",
     "description": "Fnidq is a coastal town in the Tanger-Tétouan-Al Hoceïma region, known for its picturesque beaches and proximity to the Mediterranean Sea. It is a popular destination for tourists seeking a relaxing seaside experience and exploring the local Moroccan culture.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Sidi Qacem",
-    "lat": "34.2167",
-    "lng": "-5.7000",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Rabat-Salé-Kénitra",
-    "capital": "",
-    "population": "75672",
-    "population_proper": "75672",
-    "image": "assets/images/card-image4.webp",
-    "description": "Sidi Qacem is a city in the Rabat-Salé-Kénitra region, known for its historical sites and traditional Moroccan lifestyle. The city is a key center for agriculture and local markets, offering a glimpse into the daily life and culture of the region.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -415,7 +331,7 @@
     "capital": "",
     "population": "74699",
     "population_proper": "74699",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Tiznit.jpg",
     "description": "Tiznit is a city in the Souss-Massa region, known for its traditional silver jewelry and vibrant markets. The city is a cultural and economic center, surrounded by stunning landscapes including mountains and desert areas.",
     "arnaques": "some arnaques in the city"
   },
@@ -429,7 +345,7 @@
     "capital": "",
     "population": "67628",
     "population_proper": "67628",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Youssoufia.jpg",
     "description": "Youssoufia, located in the Marrakech-Safi region, is known for its phosphate industry and historical landmarks. The city offers a mix of modern industry and traditional Moroccan culture, with a focus on economic development and local heritage.",
     "arnaques": "some arnaques in the city"
   },
@@ -443,7 +359,7 @@
     "capital": "",
     "population": "64355",
     "population_proper": "64355",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Martil.jpg",
     "description": "Martil is a charming coastal town in the Tanger-Tétouan-Al Hoceïma region, known for its beautiful beaches and vibrant tourism scene. The town offers a relaxing atmosphere with plenty of recreational activities and local dining options.",
     "arnaques": "some arnaques in the city"
   },
@@ -457,7 +373,7 @@
     "capital": "",
     "population": "59775",
     "population_proper": "59775",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Skhirate.jpg",
     "description": "Skhirate is a town located in the Rabat-Salé-Kénitra region, known for its beautiful coastline and resort areas. It is a popular destination for both locals and tourists looking for a coastal retreat with picturesque views and high-quality amenities.",
     "arnaques": "some arnaques in the city"
   },
@@ -471,7 +387,7 @@
     "capital": "",
     "population": "59606",
     "population_proper": "59606",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Ouezzane.jpg",
     "description": "Ouezzane is a city in the Tanger-Tétouan-Al Hoceïma region, known for its historical sites and traditional Moroccan crafts. The city features a rich cultural heritage with vibrant local markets and a strong sense of community.",
     "arnaques": "some arnaques in the city"
   },
@@ -485,7 +401,7 @@
     "capital": "",
     "population": "56716",
     "population_proper": "56716",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Al Hoceïma.jpg",
     "description": "Al Hoceïma is a coastal city in the Tanger-Tétouan-Al Hoceïma region, known for its stunning beaches and natural beauty. The city is a popular destination for tourists seeking a blend of relaxation and outdoor adventure in a picturesque setting.",
     "arnaques": "some arnaques in the city"
   },
@@ -499,7 +415,7 @@
     "capital": "",
     "population": "56227",
     "population_proper": "56227",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/M’diq.jpg",
     "description": "M’diq is a picturesque town in the Tanger-Tétouan-Al Hoceïma region, located along the Mediterranean coast. It is known for its beautiful beaches, vibrant tourist scene, and as a popular summer destination for both locals and international visitors.",
     "arnaques": "some arnaques in the city"
   },
@@ -513,7 +429,7 @@
     "capital": "",
     "population": "55304",
     "population_proper": "55304",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Midalt.jpg",
     "description": "Midalt is a small city located in the Drâa-Tafilalet region, known for its serene environment and traditional Moroccan lifestyle. It is an important local center for agriculture and local markets, offering a glimpse into the rural life of Morocco.",
     "arnaques": "some arnaques in the city"
   },
@@ -527,36 +443,8 @@
     "capital": "",
     "population": "54350",
     "population_proper": "54350",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Azrou.jpg",
     "description": "Azrou is a city in the Fès-Meknès region, famous for its scenic beauty and proximity to the Ifrane National Park. The city is known for its forested surroundings, local handicrafts, and as a popular spot for nature enthusiasts.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Qasbat Tadla",
-    "lat": "32.6000",
-    "lng": "-6.2667",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Béni Mellal-Khénifra",
-    "capital": "",
-    "population": "47343",
-    "population_proper": "47343",
-    "image": "assets/images/card-image4.webp",
-    "description": "Qasbat Tadla is a town in the Béni Mellal-Khénifra region, known for its historical significance and traditional Moroccan architecture. The town is a center for agriculture and local crafts, offering insights into the region's cultural heritage.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Mrirt",
-    "lat": "33.1667",
-    "lng": "-5.5667",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Béni Mellal-Khénifra",
-    "capital": "",
-    "population": "42730",
-    "population_proper": "42730",
-    "image": "assets/images/card-image4.webp",
-    "description": "Mrirt is a town located in the Béni Mellal-Khénifra region, known for its picturesque landscapes and traditional lifestyle. The town is surrounded by natural beauty, making it a peaceful place with a rich local culture.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -569,7 +457,7 @@
     "capital": "",
     "population": "40920",
     "population_proper": "40920",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Azemmour.jpg",
     "description": "Azemmour is a historic town located on the Atlantic coast, known for its ancient medina and architectural heritage. The town features traditional Moroccan buildings, historical sites, and beautiful coastal views.",
     "arnaques": "some arnaques in the city"
   },
@@ -583,26 +471,12 @@
     "capital": "",
     "population": "40067",
     "population_proper": "40067",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Zagora.jpg",
     "description": "Zagora is a town in the Drâa-Tafilalet region, renowned for its proximity to the Sahara Desert. It serves as a gateway for desert excursions and offers a unique cultural experience with its traditional Moroccan architecture and desert landscapes.",
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Ait Ourir",
-    "lat": "31.5644",
-    "lng": "-7.6628",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Marrakech-Safi",
-    "capital": "",
-    "population": "39108",
-    "population_proper": "39108",
-    "image": "assets/images/card-image4.webp",
-    "description": "Ait Ourir is a town in the Marrakech-Safi region, known for its vibrant local culture and agricultural activities. The town is a key center for producing traditional Moroccan goods and offers a glimpse into rural life in Morocco.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Aziylal",
+    "city": "Azilal",
     "lat": "31.9669",
     "lng": "-6.5694",
     "country": "Morocco",
@@ -611,22 +485,8 @@
     "capital": "",
     "population": "38520",
     "population_proper": "38520",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Azilal.jpg",
     "description": "Aziylal is a small town in the Béni Mellal-Khénifra region, known for its beautiful landscapes and traditional Moroccan atmosphere. It is an important local center for agriculture and local markets.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Sidi Yahia El Gharb",
-    "lat": "34.3058",
-    "lng": "-6.3058",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Rabat-Salé-Kénitra",
-    "capital": "",
-    "population": "37979",
-    "population_proper": "37979",
-    "image": "assets/images/card-image4.webp",
-    "description": "Sidi Yahia El Gharb is a town in the Rabat-Salé-Kénitra region, known for its traditional Moroccan charm and local markets. The town offers a mix of cultural heritage and agricultural activities, making it a significant local center.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -639,22 +499,8 @@
     "capital": "",
     "population": "35282",
     "population_proper": "35282",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/El Hajeb.jpg",
     "description": "El Hajeb is a town in the Fès-Meknès region, known for its historical sites and traditional Moroccan lifestyle. It is surrounded by beautiful landscapes and offers a glimpse into the region's cultural heritage.",
-    "arnaques": "some arnaques in the city"
-  },
-  {
-    "city": "Imzouren",
-    "lat": "35.1500",
-    "lng": "-3.8500",
-    "country": "Morocco",
-    "iso2": "MA",
-    "admin_name": "Tanger-Tétouan-Al Hoceïma",
-    "capital": "",
-    "population": "33852",
-    "population_proper": "33852",
-    "image": "assets/images/card-image4.webp",
-    "description": "Imzouren is a town located in the Tanger-Tétouan-Al Hoceïma region, known for its local markets and traditional Berber culture. The town provides a unique experience with its cultural heritage and natural surroundings.",
     "arnaques": "some arnaques in the city"
   },
   {
@@ -667,22 +513,22 @@
     "capital": "",
     "population": "29279",
     "population_proper": "29279",
-    "image": "assets/images/card-image4.webp",
+    "image": "assets/images/Arfoud.jpg",
     "description": "Arfoud is a town in the Drâa-Tafilalet region, renowned for its location near the Sahara Desert. It is known for its fossil beds and as a base for desert tourism, offering unique experiences in Morocco's vast desert landscapes.",
     "arnaques": "some arnaques in the city"
   },
   {
-    "city": "Mehdya",
-    "lat": "34.2597",
-    "lng": "-6.6500",
+    "city": "Merzouga",
+    "lat": "31.0992",
+    "lng": "-4.0117",
     "country": "Morocco",
     "iso2": "MA",
-    "admin_name": "Rabat-Salé-Kénitra",
+    "admin_name": "Drâa-Tafilalet",
     "capital": "",
-    "population": "28636",
-    "population_proper": "28636",
-    "image": "assets/images/card-image4.webp",
-    "description": "Mehdya is a small town in the Rabat-Salé-Kénitra region, known for its beautiful beaches and local seafood. It offers a relaxing coastal experience with a mix of traditional Moroccan charm and modern amenities.",
+    "population": "Unknown",
+    "population_proper": "Unknown",
+    "image": "assets/images/Merzouga2.jpg",
+    "description": "Merzouga is a small village in southeastern Morocco, known for its proximity to the Erg Chebbi dunes. It is a popular destination for tourists seeking to experience the Sahara Desert. The village offers activities such as camel trekking, sandboarding, and desert camping, providing a unique glimpse into the traditional Berber culture and the stunning desert landscape.",
     "arnaques": "some arnaques in the city"
   }
   
