@@ -111,10 +111,10 @@
                 </div>
                 <div class="email">
                   <p><strong>Email :</strong></p>
-                  <p><%= user.email %></p>
+                  <p id="email"><%= user.email %></p>
                 </div>
 
-                <form action="/update-profile" method="POST" class="profile-form">
+                <form action="/update-profile" method="POST" class="profile-form" id="profile-form">
                   <div class="form-group">
                     <label for="username"><strong>New Name :</strong></label>
                     <input type="text" name="username" id="username" value="<%= user.username %>" >

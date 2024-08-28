@@ -80,8 +80,33 @@
   padding-top: 50px;
 }
 
+
 .email {
   width: 75%;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #40c057;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.usernamee {
+  width: 110px;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #40c057;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.emaill {
+  width: 110px;
   height: 50px;
   padding-left: 10px;
   border-radius: 10px;
@@ -263,7 +288,7 @@ ul li {
 }
 
 /* Username styling */
-.username {
+.usernamee {
   font-size: 18px;
   color: #333;
   font-weight: 700;
@@ -274,7 +299,7 @@ ul li {
 }
 
 /* Email styling */
-.email {
+.emaill {
   font-size: 14px;
   color: #666;
   margin-top: 5px;

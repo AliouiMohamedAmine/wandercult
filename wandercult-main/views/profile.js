@@ -1,3 +1,5 @@
+const userEmail = document.getElementById('email').textContent; // Embed user email from server-side
+console.log(userEmail);
 document.querySelector('.formch').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);
@@ -14,8 +16,12 @@ document.querySelector('.formch').addEventListener('submit', function (event) {
             // Update profile image path in localStorage
             let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
             accounts = accounts.map(account => {
-                if (account.email === "<%= user.email %>") { // Replace with the user's email
+                if (account.email === userEmail) {
                     account.profileImagePath = newProfileImagePath;
+                    console.log("good")
+                }else{
+                    console.log("wow");
+                    console.log(userEmail);
                 }
                 return account;
             });
@@ -24,7 +30,6 @@ document.querySelector('.formch').addEventListener('submit', function (event) {
             // Update the image on the profile page
             document.querySelector('.imgprofile').src = newProfileImagePath;
             document.getElementById('profile-button').src = newProfileImagePath;
-            console.log(newProfileImagePath)
 
             alert('Profile picture updated successfully!');
             fetchhAccounts();
@@ -33,8 +38,6 @@ document.querySelector('.formch').addEventListener('submit', function (event) {
         }
     })
     .catch(error => console.error('Error uploading profile picture:', error));
-    let localAccount = JSON.parse(localStorage.getItem('accounts')) || [];
-    console.log(localAccount);
 });
 
 document.querySelector('.log').addEventListener('click', function() {
@@ -42,7 +45,7 @@ document.querySelector('.log').addEventListener('click', function() {
     
     let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
     accounts = accounts.map(account => {
-        if (account.email === "<%= user.email %>") { // Replace with the user's email
+        if (account.email === userEmail) { // Replace with the user's email
             account.profileImagePath = currentProfileImagePath;
         }
         return account;
@@ -79,39 +82,7 @@ function getAccountInfo(accounts, email) {
     };
 }
 
-async function handleFormSubmit(e) {
-    e.preventDefault();
-    
-    const form = document.getElementById('loginForm');
-    const email = form.elements['email'].value;
-    const password = form.elements['password'].value;
 
-    const accounts = await fetchhAccounts();
-    const { username, profileImagePath } = getAccountInfo(accounts, email);
-    
-    let localAccounts = JSON.parse(localStorage.getItem('accounts')) || [];
-    const emailExists = localAccounts.some(account => account.email === email);
-
-    if (!emailExists) {
-        if (confirm("Do you want to save your account for easier access next time?")) {
-            const account = { email, password, profileImagePath, username };
-            localAccounts.push(account);
-            localStorage.setItem('accounts', JSON.stringify(localAccounts));
-        }
-    } else {
-        // Update the account with the new profile image path
-        localAccounts = localAccounts.map(account => {
-            if (account.email === email) {
-                account.profileImagePath = profileImagePath; // Update profile image path
-                account.username = username; // Update username if needed
-            }
-            return account;
-        });
-        localStorage.setItem('accounts', JSON.stringify(localAccounts));
-    }
-
-    form.submit();
-}
 
 async function fetchAccounts() {
     let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
@@ -156,6 +127,8 @@ document.getElementById('loginForm').addEventListener('submit', handleFormSubmit
 document.querySelector('.profile-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const formData = new FormData(this);
+    let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    console.log(accounts);
 
     fetch('/update-profile', {
         method: 'POST',
@@ -163,12 +136,10 @@ document.querySelector('.profile-form').addEventListener('submit', function (eve
     })
     .then(response => {
         if (response.redirected) {
-            // If the response is a redirect, handle localStorage update here
             const email = formData.get('email');
             const password = formData.get('password');
 
             if (password) {
-                // Update localStorage with the new password
                 let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
                 accounts = accounts.map(account => {
                     if (account.email === email) {
@@ -183,4 +154,6 @@ document.querySelector('.profile-form').addEventListener('submit', function (eve
         }
     })
     .catch(error => console.error('Error updating profile:', error));
+    const emailh = formData.get('email');
+    console.log(emailh);
 });
