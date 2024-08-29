@@ -79,7 +79,7 @@
                   alt="settings"
                   class="icon settings-icon"
                 />
-                <li><a href="/settings">settings</a></li>
+                <li><a onclick="window.location.href='/profile';">settings</a></li>
               </span>
               <span class="log">
                 <img
@@ -130,14 +130,18 @@
                   <button type="submit">Update</button>
                 </form>
                 
-
-          
-              <form action="/upload-profile-pic" method="POST" class="formch" enctype="multipart/form-data">
+                <form action="/upload-profile-pic" method="POST" class="formch" enctype="multipart/form-data">
                   <label for="profilePic">Change profile image :</label>
                   <input type="file" name="profilePic" id="profilePic" accept="image/*" required>
                   <button type="submit">Uploader</button>
-              </form>
+                </form>
               </div>
+            </div>
+            <!-- Dark Mode Toggle Section -->
+            <div class="bloc">
+                <div class="type">Mode</div>
+                <button id="darkModeToggle"></button>
+                <div class="titre">Switch to dark mode</div>
             </div>
           </div>
         </container>
@@ -148,12 +152,11 @@
             const darkModeToggle = document.getElementById('darkModeToggle');
             const body = document.body;
 
-        
             // Check if dark mode is already enabled
             if (localStorage.getItem('darkMode') === 'enabled') {
                 body.classList.add('dark-mode');
             }
-        
+
             darkModeToggle.addEventListener('click', function() {
                 body.classList.toggle('dark-mode');
                 if (body.classList.contains('dark-mode')) {
@@ -163,8 +166,8 @@
                 }
             });
         });
-        </script>
-        <script src="profile.js"></script>
+      </script>
+      <script src="profile.js"></script>
     
 </body>
 </html>
