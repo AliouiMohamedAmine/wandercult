@@ -273,16 +273,14 @@ body{
   margin-left: 28%;
 }
 .cardprof{
-  max-width: 400px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
   padding: 20px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 100 px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .name, .email {
   margin-bottom: 20px;
@@ -317,7 +315,7 @@ label {
 
 input[type="file"] {
 margin-bottom: 15px;
-max-width: 100%;
+width: 100%;
 padding: 5px;
 border: 1px solid #ccc;
 border-radius: 5px;
@@ -331,7 +329,7 @@ margin-right: 10px;
 background-color: #007bff;
 color: white;
 border: none;
-border-radius: 5px;
+border-radius: 20px;
 cursor: pointer;
 }
 
@@ -358,6 +356,10 @@ border-radius: 8px;
 padding: 20px;
 margin-bottom: 20px;
 border: 1px solid #ccc;
+}
+
+.profile-form input{
+  width: 500px;
 }
 
 .form-group {
@@ -389,7 +391,7 @@ width: 100%;
 padding: 10px;
 background-color: #007bff;
 border: none;
-border-radius: 5px;
+border-radius: 20px;
 color: #ffffff;
 font-weight: 600;
 cursor: pointer;
@@ -400,6 +402,33 @@ button:hover {
 background-color: #0056b3;
 }
 
+.bloc {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode .bloc{
+  background-color: #1a1a1a;
+}
+.type {
+  font-size: 20px;
+  font-family: "poppins";
+
+}
+.titre {
+  font-size: 20px;
+  margin-left: -25px;
+  font-family: "poppins";
+
+}
 
 
 
