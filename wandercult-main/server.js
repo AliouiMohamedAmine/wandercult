@@ -408,6 +408,10 @@ const savedCitySchema = new mongoose.Schema({
   adminname: String,
   population: String,
   image: String,
+  image1: String,
+  image2: String,
+  image3: String,
+  image4: String,
   description: String,
   arnques: String,
   arnques2: String,
@@ -423,13 +427,17 @@ const SavedCity = mongoose.model("SavedCity", savedCitySchema);
 
 // Route to save city data
 app.post("/api/save-city", isAuthenticated, async (req, res) => {
-  const { title, adminname, population, image, description, arnques ,arnques2 ,arnques3 ,arnques4 ,arnques5 ,lat,lng} = req.body;
+  const { title, adminname, population, image,image1,image2,image3,image4, description, arnques ,arnques2 ,arnques3 ,arnques4 ,arnques5 ,lat,lng} = req.body;
   try {
     const newCity = new SavedCity({
       title,
       adminname,
       population,
       image,
+      image1,
+      image2,
+      image3,
+      image4,
       description,
       arnques,
       arnques2,
