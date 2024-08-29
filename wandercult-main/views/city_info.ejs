@@ -105,8 +105,30 @@
             <h1 id="cityName"></h1>
           </div>
          
-          <div class="image-container">
-            <img  id="cityImage" src="" alt="City Image" style="width:100%;max-width:600px;" />
+          <div class="top">
+            <div class="banner" id="banner">
+              <div class="bannerText">
+                <img
+                  src="assets/images/left-arrow.png"
+                  alt="left-arrow"
+                  class="left-arrow"
+                  onclick="changePhrase('prev')"
+                />
+                <img
+                  src="assets/images/right-arrow.png"
+                  alt="right-arrow"
+                  class="right-arrow"
+                  onclick="changePhrase('next')"
+                />
+                <h2 id="bannerPhrase"></h2>
+                <p></p>
+                <div class="circle circle1 active"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
+                <div class="circle circle5"></div>
+              </div>
+            </div>
           </div>
         
           <div class="card-container">
@@ -243,5 +265,123 @@
             }
         });
     });
+    </script>
+    <script>
+      const phrases = [
+  "", 
+  "",
+  "", 
+  "",
+  ""
+];
+
+
+function getQueryarams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    city: params.get("city"),
+    admin_name: params.get("admin_name"),
+    population: params.get("population"),
+    image: params.get("image"),
+    image1: params.get("image1"),
+    image2: params.get("image2"),
+    image3: params.get("image3"),
+    image4: params.get("image4"),
+    arnaques: params.get("arnaques"),
+    arnaques2: params.get("arnaques2"),
+    arnaques3: params.get("arnaques3"),
+    arnaques4: params.get("arnaques4"),
+    arnaques5: params.get("arnaques5"),
+    description: params.get("description"),
+    lat: params.get("lat"),
+    lng: params.get("lng"),
+  };
+}
+
+// Extraire les informations de la ville
+const cityInf = getQueryarams();
+
+
+
+
+const images = [
+cityInf.image, 
+cityInf.image1, 
+cityInf.image2, 
+cityInf.image3, 
+cityInf.image4, 
+];
+
+let currentPhraseIndex = 0;
+let isTransitioning = false;
+let autoChangeInterval;
+
+function changePhrase(direction) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  const bannerPhrase = document.getElementById("bannerPhrase");
+  const banner = document.getElementById("banner");
+
+  bannerPhrase.classList.add("fade-out");
+
+  setTimeout(() => {
+    if (direction === "next") {
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+    } else if (direction === "prev") {
+      currentPhraseIndex = (currentPhraseIndex - 1 + phrases.length) % phrases.length;
+    }
+
+    bannerPhrase.textContent = phrases[currentPhraseIndex];
+
+    // Update the background image
+    banner.style.backgroundImage = `url(${images[currentPhraseIndex]})`;
+
+    updateActiveCircle();
+
+    bannerPhrase.classList.remove("fade-out");
+    bannerPhrase.classList.add("fade-in");
+
+    setTimeout(() => {
+      bannerPhrase.classList.remove("fade-in");
+      isTransitioning = false;
+    }, 500);
+  }, 500);
+}
+
+function updateActiveCircle() {
+  const circles = document.querySelectorAll(".circle");
+  circles.forEach((circle, index) => {
+    if (index === currentPhraseIndex) {
+      circle.classList.add("active");
+    } else {
+      circle.classList.remove("active");
+    }
+  });
+}
+
+function startAutoChange() {
+  autoChangeInterval = setInterval(() => {
+    changePhrase('next');
+  }, 3000);
+}
+
+function stopAutoChange() {
+  clearInterval(autoChangeInterval);
+}
+
+window.onload = () => {
+  startAutoChange();
+  document.getElementById("banner").style.backgroundImage = `url(${images[0]})`;
+};
+
+document.querySelectorAll('.left-arrow, .right-arrow').forEach(button => {
+  button.addEventListener('click', () => {
+    stopAutoChange();
+    startAutoChange();
+  });
+});
+
+
     </script>
 </html>

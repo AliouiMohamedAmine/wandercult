@@ -1,482 +1,453 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-drag: none;
-  }
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Dark mode styles */
-  
-  body.dark-mode {
-    background-image: url(images/dark.jpg);
-    color: #ffffff;
-  }
-  
-  body.dark-mode .left {
-    background-color: #1e1e1e;
-    color: #cfcfcf;
-  }
-  
-  body.dark-mode .left ul {
-    background-color: #1e1e1e;
-  }
-  
-  body.dark-mode .left ul li a {
-    color: #b0b0b0;
-  }
-  
-  body.dark-mode .left span:hover {
-    background-color: #333333;
-  }
-  
-
-  
-  body.dark-mode .line1{
-    background-color: #444444;
-  }
-  
-  body.dark-mode .formch{
-    background-color: rgb(13, 12, 12);
-  }
-  body.dark-mode #profilePic{
-    background-color: #282828;
-  }
-
-  body.dark-mode .info {
-    color: #cccccc;
-  }
-  
-  body.dark-mode .info a{
-    color: #ffffff;
-  }
-  
-  body.dark-mode .saved-icon, 
-  body.dark-mode .friends-icon , 
-  body.dark-mode .discover-icon , 
-  body.dark-mode .home-icon , 
-  body.dark-mode .settings-icon ,
-  body.dark-mode .logout-icon{
-    filter: invert(1);
-  }
-  body.dark-mode header,
-  body.dark-mode .left {
-    background-color: #1e1e1e;
-    color: #cfcfcf;
-  }
-
-  body.dark-mode .right .cardprof{
-    background-color: #1a1a1a;
-  }
- 
-  body.dark-mode .email ,
-  body.dark-mode .name{
-    background-color: #3b3b3b;
-  }
-  body.dark-mode strong{
-    color: #ffffff;
-  }
-  /* Additional elements styling */
-  
-  
-  header {
-    position: fixed;
-    width: 100%;
-    height: 9vh;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1;
-    border-bottom: 1px solid #c9c9c9;
-  }
-  
-  .icon {
-    width: 30px;
-    cursor: pointer;
-  }
-  .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    margin-bottom: 2px;
-  }
-  .logotext {
-    width: 150px;
-  }
-  
-  .search {
-    border: 1px solid #c9c9c9;
-    padding: 9px 20px;
-    border-radius: 7px;
-    position: absolute;
-    right: 6%;
-    font-family: poppins;
-    font-size: 13px;
-    width: 250px;
-    height: 35px;
-  }
-  
-  .avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 10px;
-    position: absolute;
-    right: 1%;
-    margin-top: -2px;
-    cursor: pointer;
-  }
-  .icon-searcher {
-    position: absolute;
-    right: 7%;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    z-index: 1;
-    opacity: 0.5;
-  }
-  .search:focus {
-    outline: none;
-    border: 1px solid #40c057;
-  }
-  container {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
-  
-
-  body{
-    background-image: url('images/duplo24.jpg');
-  }
-
-
-  .left-arrow {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 2%;
-    top: 45%;
-    cursor: pointer;
-  }
-  .right-arrow {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 2%;
-    top: 45%;
-    cursor: pointer;
-  }
-  
-  .left {
-    display: flex;
-    flex-direction: column;
-    margin-top: 9vh;
-    width: 15%;
-    height: 91vh;
-    background-color: #ffffff;
-    position: fixed;
-  }
-  
-  .left ul {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-    font-size: 12px;
-    align-items: start;
-  }
-  
-  .left ul li {
-    margin: 20px 0;
-    list-style: none;
-  }
-  .left ul li a {
-    text-decoration: none;
-    color: #4a4a4a;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .left ul img {
-    scale: 0.6;
-    display: inline;
-    opacity: 0.7;
-  }
-  
-  .left span {
-    width: 100%;
-    display: flex;
-    padding-left: 10px;
-    align-items: center;
-    flex-direction: row;
-    gap: -50px;
-    cursor: pointer;
-  }
-  .left span:hover {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-  }
-
-  
-  .line1 {
-    width: 90%;
-    margin-left: 2px;
-    height: 1px;
-    background-color: #dcdcdc;
-    margin-top: 2px;
-  }
-  
-  .info {
-    width: 90%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    bottom: 1%;
-    left: 10px;
-    font-family: poppins;
-    font-size: 11px;
-  }
-  
-  .info a {
-    text-decoration: none;
-    color: #1a1a1a;
-  }
-  
-  .ul2 {
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
-  }
-  
-  .right {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    position: relative;
-    left: 15%;
-    top: 9vh;
-  }
-  .imgprofile {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    object-fit: cover;
-    margin-bottom: 20px;
-    margin-left: 28%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
 }
-  .cardprof{
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100 px;
-    margin-bottom: 100px;
-  }
-  .name, .email {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* Dark mode styles */
+
+body.dark-mode {
+  background-image: url(images/dark.jpg);
+  color: #ffffff;
+}
+
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+body.dark-mode .left ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .left ul li a {
+  color: #b0b0b0;
+}
+
+body.dark-mode .left span:hover {
+  background-color: #333333;
+}
+
+
+
+body.dark-mode .line1{
+  background-color: #444444;
+}
+
+body.dark-mode .formch{
+  background-color: rgb(13, 12, 12);
+}
+body.dark-mode #profilePic{
+  background-color: #282828;
+}
+
+body.dark-mode .info {
+  color: #cccccc;
+}
+
+body.dark-mode .info a{
+  color: #ffffff;
+}
+
+body.dark-mode .saved-icon, 
+body.dark-mode .friends-icon , 
+body.dark-mode .discover-icon , 
+body.dark-mode .home-icon , 
+body.dark-mode .settings-icon ,
+body.dark-mode .logout-icon{
+  filter: invert(1);
+}
+body.dark-mode header,
+body.dark-mode .left {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+body.dark-mode .right .cardprof{
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .email ,
+body.dark-mode .name{
+  background-color: #3b3b3b;
+}
+body.dark-mode strong{
+  color: #ffffff;
+}
+/* Additional elements styling */
+
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 9vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.icon {
+  width: 30px;
+  cursor: pointer;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+.logotext {
+  width: 150px;
+}
+
+.search {
+  border: 1px solid #c9c9c9;
+  padding: 9px 20px;
+  border-radius: 7px;
+  position: absolute;
+  right: 6%;
+  font-family: poppins;
+  font-size: 13px;
+  width: 250px;
+  height: 35px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+  right: 1%;
+  margin-top: -2px;
+  cursor: pointer;
+}
+.icon-searcher {
+  position: absolute;
+  right: 7%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.5;
+}
+.search:focus {
+  outline: none;
+  border: 1px solid #40c057;
+}
+container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+body{
+  background-image: url('images/duplo24.jpg');
+}
+
+
+.left-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 2%;
+  top: 45%;
+  cursor: pointer;
+}
+.right-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2%;
+  top: 45%;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9vh;
+  width: 15%;
+  height: 91vh;
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.left ul {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  font-size: 12px;
+  align-items: start;
+}
+
+.left ul li {
+  margin: 20px 0;
+  list-style: none;
+}
+.left ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.left ul img {
+  scale: 0.6;
+  display: inline;
+  opacity: 0.7;
+}
+
+.left span {
+  width: 100%;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  flex-direction: row;
+  gap: -50px;
+  cursor: pointer;
+}
+.left span:hover {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+
+
+.line1 {
+  width: 90%;
+  margin-left: 2px;
+  height: 1px;
+  background-color: #dcdcdc;
+  margin-top: 2px;
+}
+
+.info {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 1%;
+  left: 10px;
+  font-family: poppins;
+  font-size: 11px;
+}
+
+.info a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.ul2 {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  position: relative;
+  left: 15%;
+  top: 9vh;
+}
+.imgprofile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: 28%;
+}
+.cardprof{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100 px;
+  margin-bottom: 100px;
+}
+.name, .email {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .name p, .email p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 strong {
-    color: #000000;
+  color: #000000;
 }
-  form {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+form {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 label {
-    margin-bottom: 10px;
-    font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 input[type="file"] {
-  margin-bottom: 15px;
-  max-width: 100%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  cursor: pointer;
+margin-bottom: 15px;
+max-width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #fff;
+cursor: pointer;
 }
 
 input[type="file"]::-webkit-file-upload-button {
-  padding: 10px 15px;
-  margin-right: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+padding: 10px 15px;
+margin-right: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
 }
 
 input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: #0056b3;
+background-color: #0056b3;
 }
 
 
 
 /* Styles généraux */
 body.dark-mode .profile-form{
-  background-color: #1e1e1e;
+background-color: #1e1e1e;
 }
 body.dark-mode .form-group input{
-  background-color: #2c2c2c;
-  border: 1px solid #333333;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+background-color: #2c2c2c;
+border: 1px solid #333333;
+color: #ffffff;
+border: 1px solid #ffffff;
 }
 
 .profile-form {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+background-color: #f9f9f9;
+border-radius: 8px;
+padding: 20px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
 }
 
 .form-group {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-  color: #ffffff;
+display: block;
+margin-bottom: 5px;
+font-weight: 500;
+color: #ffffff;
 }
 
 .form-group input {
-  padding: 10px;
-  border: 1px solid #333333;
-  border-radius: 5px;
-  background-color: #ffffff;
-  color: #000000;
+padding: 10px;
+border: 1px solid #333333;
+border-radius: 5px;
+background-color: #ffffff;
+color: #000000;
 }
 
 .form-group input:focus {
-  outline: none;
-  border-color: #3f51b5;
+outline: none;
+border-color: #3f51b5;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+width: 100%;
+padding: 10px;
+background-color: #007bff;
+border: none;
+border-radius: 5px;
+color: #ffffff;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+background-color: #0056b3;
 }
 
 
 
 
-/* Base style for the button */
+/* Style de base du bouton */
 #darkModeToggle {
-  width: 30px; /* Smaller width */
-  height: 15px; /* Smaller height */
-  background-color: #4a4a4a;
-  border-radius: 15px;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0 auto; /* Center the button */
-  display: block; /* Center the button */
+width: 120px; /* Smaller width */
+height: 30px;
+position: relative;
+outline: none;
+margin: 0 auto; /* Center the button */
+display: block; /* Center the button */
+
+padding: 5px 10px; /* Réduction du padding */
+background-color: #4a4a4a; /* Couleur de fond initiale (gris foncé) */
+color: #ffffff; /* Couleur du texte (blanc) */
+border: none;
+border-radius: 15px; /* Réduction des coins arrondis */
+cursor: pointer;
+font-size: 14px; /* Réduction de la taille de la police */
+font-family: 'Poppins', sans-serif;
+transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
 }
 
-/* Circle inside the toggle button */
-#darkModeToggle:before {
-  content: '';
-  width: 13px; /* Smaller circle */
-  height: 13px; /* Smaller circle */
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  transition: transform 0.3s;
+/* Effet hover */
+#darkModeToggle:hover {
+background-color: #333333; /* Fond plus sombre au survol */
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-body.dark-mode .wrapper {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode .cardprof {
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-}
-
-body.dark-mode .form-group input {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-body.dark-mode .form-group label {
-  color: #ddd;
-}
-
-/* Toggle button in dark mode */
+/* Style du bouton quand le mode sombre est activé */
 body.dark-mode #darkModeToggle {
-  background-color: #ffffff;
+background-color: #ffffff; /* Couleur de fond (blanc) */
+color: #121212; /* Texte noir */
 }
 
-body.dark-mode #darkModeToggle:before {
-  transform: translateX(15px); /* Adjust for smaller button */
+/* Effet hover en mode sombre */
+body.dark-mode #darkModeToggle:hover {
+background-color: #e0e0e0; /* Fond légèrement gris au survol */
 }
 
-/* Adding an icon to indicate dark mode */
-#darkModeToggle::after {
-  content: "🌙";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 10px; /* Smaller icon */
-  color: #fff;
+/* Ajouter une icône de lune pour indiquer le mode sombre */
+#darkModeToggle::before {
+content: "🌙 Dark"; /* Icône de lune */
+margin-right: 5px; /* Réduction de l'espace entre l'icône et le texte */
 }
 
-body.dark-mode #darkModeToggle::after {
-  content: "☀️";
-  color: #121212;
+/* Changer l'icône en mode sombre */
+body.dark-mode #darkModeToggle::before {
+content: "Light ☀️"; /* Icône de soleil pour indiquer le retour au mode clair */
 }
+
+
