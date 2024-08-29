@@ -399,3 +399,55 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+/* Style de base du bouton */
+#darkModeToggle {
+  width: 120px; /* Smaller width */
+  height: 30px;
+  position: relative;
+  outline: none;
+  margin: 0 auto; /* Center the button */
+  display: block; /* Center the button */
+
+  padding: 5px 10px; /* Réduction du padding */
+  background-color: #4a4a4a; /* Couleur de fond initiale (gris foncé) */
+  color: #ffffff; /* Couleur du texte (blanc) */
+  border: none;
+  border-radius: 15px; /* Réduction des coins arrondis */
+  cursor: pointer;
+  font-size: 14px; /* Réduction de la taille de la police */
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
+}
+
+/* Effet hover */
+#darkModeToggle:hover {
+  background-color: #333333; /* Fond plus sombre au survol */
+}
+
+/* Style du bouton quand le mode sombre est activé */
+body.dark-mode #darkModeToggle {
+  background-color: #ffffff; /* Couleur de fond (blanc) */
+  color: #121212; /* Texte noir */
+}
+
+/* Effet hover en mode sombre */
+body.dark-mode #darkModeToggle:hover {
+  background-color: #e0e0e0; /* Fond légèrement gris au survol */
+}
+
+/* Ajouter une icône de lune pour indiquer le mode sombre */
+#darkModeToggle::before {
+  content: "🌙 Dark"; /* Icône de lune */
+  margin-right: 5px; /* Réduction de l'espace entre l'icône et le texte */
+}
+
+/* Changer l'icône en mode sombre */
+body.dark-mode #darkModeToggle::before {
+  content: "Light ☀️"; /* Icône de soleil pour indiquer le retour au mode clair */
+}
+
+
