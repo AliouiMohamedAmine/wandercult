@@ -171,15 +171,155 @@ body{
   margin-left: 30px;
 }
 
-.right img {
-  border-radius: 10px; /* Coins arrondis pour l'image */
-  margin-bottom: 20px; /* Espacement sous l'image */
-  margin-top: 30px;
-  width: 100%;
-  height: auto; /* Assurez-vous que l'image s'adapte correctement à la largeur */
-  margin-left: auto;
-  margin-right: auto;
+.top {
+  position: relative;
+  display: flex;
+  height: 80vh;
+  width: 800px;
+  justify-content: center;
+  margin: auto;
+  
 }
+
+.banner {
+  width: 99%;
+  height: 100%;
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    rgba(12, 238, 106, 0.5),
+    rgba(5, 172, 255, 0.5)
+  );
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.bannerText {
+  font-family: poppins;
+  font-size: 30px;
+  color: #111111;
+  font-family: poppins;
+  text-align: center;
+  margin-top: -20px;
+}
+.bannerText h2 {
+  font-size: 40px;
+  color: #111111;
+  font-family: poppins;
+}
+
+.bannerText p {
+  font-size: 15px;
+  color: #111111;
+  margin-top: -5px;
+  font-family: poppins;
+}
+.left-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 2%;
+  top: 45%;
+  cursor: pointer;
+}
+.right-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2%;
+  top: 45%;
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #111111;
+  border-radius: 50%;
+}
+.circle1 {
+  bottom: 5%;
+  left: 40%;
+  background-color: #ffffff;
+}
+.circle2 {
+  bottom: 5%;
+  left: 44%;
+}
+.circle3 {
+  bottom: 5%;
+  left: 48%;
+}
+.circle4 {
+  bottom: 5%;
+  left: 52%;
+}
+.circle5 {
+  bottom: 5%;
+  left: 56%;
+}
+.circle6 {
+  bottom: 5%;
+  left: 60%;
+}
+
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scaleY(1.2);
+  }
+}
+.bannerText h2 {
+  font-size: 40px;
+  color: #111111;
+  font-family: poppins;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.circle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #111111;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.circle.active {
+  background-color: #ffffff;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+
 
 .right #cityName {
   font-size: 28px; /* Taille de la police pour le nom de la ville */
@@ -558,12 +698,15 @@ image-container {
   height: 200px;
   margin-bottom: 30px;
   animation: fadeIn 0.5s ease;
-  background-color: #f9ffdc;
+  background-color: #1a8c68;
   align-content:center ;
 }
-
+.card2-description{
+  font-weight: 700;
+}
 .card2-title{
-  color: rgb(0, 89, 255);
+  color: rgb(255, 0, 0);
+  font-size: 40px;
 }
 /* Fade in animation */
 @keyframes fadeIn {

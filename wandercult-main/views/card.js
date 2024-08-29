@@ -20,16 +20,16 @@ function performSearch() {
 
 
 
-function createCard(title, adminname, population, image, description, arnques,arnques2,arnques3,arnques4,arnques5,lat,lng) {
+function createCard(title, adminname, population, image, image1, image2, image3, image4, description, arnques,arnques2,arnques3,arnques4,arnques5,lat,lng) {
   return `
     <div class="card" >
-      <img src='${escapeQuotes(image)}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(description)}', '${escapeQuotes(arnques)}','${escapeQuotes(arnques2)}','${escapeQuotes(arnques3)}','${escapeQuotes(arnques4)}','${escapeQuotes(arnques5)}','${escapeQuotes(lat)}','${escapeQuotes(lng)}')" />
+      <img src='${escapeQuotes(image)}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(image1)}', '${escapeQuotes(image2)}', '${escapeQuotes(image3)}', '${escapeQuotes(image4)}', '${escapeQuotes(description)}', '${escapeQuotes(arnques)}','${escapeQuotes(arnques2)}','${escapeQuotes(arnques3)}','${escapeQuotes(arnques4)}','${escapeQuotes(arnques5)}','${escapeQuotes(lat)}','${escapeQuotes(lng)}')" />
       <div class="cardText">
         <h2>${escapeQuotes(title)}</h2>
         <p>${escapeQuotes(adminname)}</p>
       </div>
       <label class="container2">
-        <input type="checkbox" class="save-checkbox" onclick="saveCity(event, '${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(description)}','${escapeQuotes(arnques)}', '${escapeQuotes(arnques2)}','${escapeQuotes(arnques3)}','${escapeQuotes(arnques4)}','${escapeQuotes(arnques5)}','${escapeQuotes(lat)}','${escapeQuotes(lng)}')">
+        <input type="checkbox" class="save-checkbox" onclick="saveCity(event, '${escapeQuotes(title)}', '${escapeQuotes(adminname)}', '${escapeQuotes(population)}', '${escapeQuotes(image)}', '${escapeQuotes(image1)}','${escapeQuotes(image2)}','${escapeQuotes(image3)}','${escapeQuotes(image4)}','${escapeQuotes(description)}','${escapeQuotes(arnques)}', '${escapeQuotes(arnques2)}','${escapeQuotes(arnques3)}','${escapeQuotes(arnques4)}','${escapeQuotes(arnques5)}','${escapeQuotes(lat)}','${escapeQuotes(lng)}')">
         <svg class="save-regular" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"></path></svg>
         <svg class="save-solid" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path></svg>
       </label>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       data.forEach((city) => {
         container.innerHTML += `
         <div class="card">
-          <img src='${city.image}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(city.title)}', '${escapeQuotes(city.adminname)}', '${escapeQuotes(city.population)}', '${escapeQuotes(city.image)}', '${escapeQuotes(city.description)}', '${escapeQuotes(city.arnques)}','${escapeQuotes(city.arnques2)}','${escapeQuotes(city.arnques3)}','${escapeQuotes(city.arnques4)}','${escapeQuotes(city.arnques5)}','${escapeQuotes(city.lat)}','${escapeQuotes(city.lng)}')"/>
+          <img src='${city.image}' alt="card-image5" class="card-image" onclick="goToCityInfo('${escapeQuotes(city.title)}', '${escapeQuotes(city.adminname)}', '${escapeQuotes(city.population)}', '${escapeQuotes(city.image)}','${escapeQuotes(city.image1)}','${escapeQuotes(city.image2)}','${escapeQuotes(city.image3)}','${escapeQuotes(city.image4)}', '${escapeQuotes(city.description)}', '${escapeQuotes(city.arnques)}','${escapeQuotes(city.arnques2)}','${escapeQuotes(city.arnques3)}','${escapeQuotes(city.arnques4)}','${escapeQuotes(city.arnques5)}','${escapeQuotes(city.lat)}','${escapeQuotes(city.lng)}')"/>
           <div class="cardText">
             <h2>${city.title}</h2>
           </div>
@@ -73,6 +73,10 @@ function saveCity(
   adminname,
   population,
   image,
+  image1,
+  image2,
+  image3,
+  image4,
   description,
   arnques,
   arnques2,
@@ -97,6 +101,10 @@ function saveCity(
           adminname,
           population,
           image,
+          image1,
+          image2,
+          image3,
+          image4,
           description,
           arnques,
           arnques2,
@@ -148,12 +156,16 @@ function unsaveCity(title) {
 }
 
 
-function goToCityInfo(city, admin_name, population, image, description, arnaques,arnaques2,arnaques3,arnaques4,arnaques5,lat,lng) {
+function goToCityInfo(city, admin_name, population, image, image1, image2, image3, image4, description, arnaques,arnaques2,arnaques3,arnaques4,arnaques5,lat,lng) {
   const url = new URL('/cityInfo', window.location.origin);
   url.searchParams.set('city', city);
   url.searchParams.set('admin_name', admin_name);
   url.searchParams.set('population', population);
   url.searchParams.set('image', image);
+  url.searchParams.set('image1', image1);
+  url.searchParams.set('image2', image2);
+  url.searchParams.set('image3', image3);
+  url.searchParams.set('image4', image4);
   url.searchParams.set('arnaques', arnaques);
   url.searchParams.set('arnaques2', arnaques2);
   url.searchParams.set('arnaques3', arnaques3);
@@ -189,6 +201,10 @@ function displayCities(cities) {
       city.admin_name,
       city.population,
       city.image,
+      city.image1,
+      city.image2,
+      city.image3,
+      city.image4,
       city.description,
       city.arnaques,
       city.arnaques2,
@@ -223,6 +239,10 @@ function getQueryParams() {
     admin_name: params.get("admin_name"),
     population: params.get("population"),
     image: params.get("image"),
+    image1: params.get("image1"),
+    image2: params.get("image2"),
+    image3: params.get("image3"),
+    image4: params.get("image4"),
     arnaques: params.get("arnaques"),
     arnaques2: params.get("arnaques2"),
     arnaques3: params.get("arnaques3"),
@@ -284,3 +304,4 @@ var marker = L.marker([cityInfo.lat, cityInfo.lng]).addTo(map)
 
 
 //scams card
+
