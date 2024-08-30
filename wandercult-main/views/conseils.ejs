@@ -8,6 +8,9 @@
     <meta http-equiv="Expires" content="0">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="conseil.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    
     <script src="card.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>advise</title>
@@ -55,7 +58,7 @@
       <container>
         <div class="left">
           <ul>
-            <span>
+            <span id="num">
               <img
                 src="assets/images/home.png"
                 alt="home"
@@ -63,7 +66,7 @@
               />
               <li><a href="/home">Home</a></li>
             </span>
-            <span class="second">
+            <span id="num" class="second">
               <img
                 src="assets/images/old-phone_11552945.png"
                 alt="discover"
@@ -71,7 +74,7 @@
               />
               <li><a href="/help">Numbers & advise</a></li>
             </span>
-            <span>
+            <span id="num">
               <img
                 src="assets/images/error-sign_76789.png"
                 alt="friends"
@@ -79,7 +82,7 @@
               />
               <li><a href="/report">Report</a></li>
             </span>
-            <span>
+            <span id="num">
               <img
                 src="assets/images/saved.png"
                 alt="saved"
@@ -90,7 +93,7 @@
           </ul>
           <div class="line1"></div>
           <ul class="ul2">
-            <span>
+            <span id="num">
               <img
                 src="assets/images/settings.png"
                 alt="settings"
@@ -98,14 +101,14 @@
               />
               <li><a href="/settings">settings</a></li>
             </span>
-            <span>
+            <span id="num">
               <img
                 src="assets/images/logout.png"
                 alt="logout"
                 class="icon logout-icon"
               />
               <li><a href="/logout">Logout</a></li>
-            </span>
+            </span >
           </ul>
           <div class="info">
             <a href="usage_condition.html" target="_blank"
@@ -132,13 +135,13 @@
             <h1>Useful Phone Numbers in Morocco</h1>
         
             <ol>
-                <li><strong>Police:</strong> In case of an emergency or if you need police assistance, dial <span style="color:red;">19</span>.</li>
-                <li><strong>Firefighters:</strong> To report a fire or request the intervention of firefighters, dial <span style="color:red;">15</span>.</li>
-                <li><strong>SAMU:</strong> For medical emergencies, including situations requiring an ambulance, dial <span style="color:red;">150</span>.</li>
-                <li><strong>Roadside Assistance:</strong> In case of a car breakdown or accident on the road, you can contact the National Highway Emergency Call Center by dialing <span style="color:red;">5050</span>.</li>
-                <li><strong>Tourist Assistance:</strong> For help or tourist information, you can contact the Moroccan National Tourist Office at <span style="color:red;">+212 5372-02145</span>.</li>
+                <li><strong>Police:</strong> In case of an emergency or if you need police assistance, dial <span id="num" style="color:red;">19</span>.</li>
+                <li><strong>Firefighters:</strong> To report a fire or request the intervention of firefighters, dial <span id="num" style="color:red;">15</span>.</li>
+                <li><strong>SAMU:</strong> For medical emergencies, including situations requiring an ambulance, dial <span id="num"style="color:red;">150</span>.</li>
+                <li><strong>Roadside Assistance:</strong> In case of a car breakdown or accident on the road, you can contact the National Highway Emergency Call Center by dialing <spa id="num" style="color:red;">5050</span>.</li>
+                <li><strong>Tourist Assistance:</strong> For help or tourist information, you can contact the Moroccan National Tourist Office at <span id="num" style="color:red;">+212 5372-02145</span>.</li>
                 <li><strong>Consular Assistance:</strong> If you are a foreign national in need of consular assistance, contact your country's embassy or consulate in Morocco. Contact details may vary depending on your nationality.</li>
-                <li><strong>Telephone Information Service:</strong> <span style="color:red;">160</span> is a national general information telephone service.</li>
+                <li><strong>Telephone Information Service:</strong> <span id="num" style="color:red;">160</span> is a national general information telephone service.</li>
                 <li><strong>Customer Service of Airlines, Hotels, etc.:</strong> If you have problems with a reservation or need assistance, contact the customer service of the airline, hotel, or any other relevant company. Phone numbers may vary depending on the company.</li>
             </ol>
         
@@ -146,6 +149,128 @@
         </div>
         
       </container>
+
+    <!-- Chatbot Button and Container -->
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>WandyBot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there <br>How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+  </div>
+<script>
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+
+let userMessage = null; // Variable to store user's message
+const inputInitHeight = chatInput.scrollHeight;
+
+// API configuration
+const API_KEY = "AIzaSyBK1OSc9bQsZNtUj5by_79ZsDCULF5jhmQ"; // Your API key here
+const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+
+const createChatLi = (message, className) => {
+  // Create a chat <li> element with passed message and className
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", `${className}`);
+  let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi; // return chat <li> element
+}
+
+const generateResponse = async (chatElement) => {
+  const messageElement = chatElement.querySelector("p");
+
+  // Define the properties and message for the API request
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ 
+      contents: [{ 
+        role: "user", 
+        parts: [{ text: userMessage }] 
+      }] 
+    }),
+  }
+
+  // Send POST request to API, get response and set the reponse as paragraph text
+  try {
+    const response = await fetch(API_URL, requestOptions);
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error.message);
+    
+    // Get the API response text and update the message element
+    messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1');
+  } catch (error) {
+    // Handle error
+    messageElement.classList.add("error");
+    messageElement.textContent = error.message;
+  } finally {
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+  }
+}
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
+  if (!userMessage) return;
+
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Display "Thinking..." message while waiting for the response
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+}
+
+chatInput.addEventListener("input", () => {
+  // Adjust the height of the input textarea based on its content
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+  // If Enter key is pressed without Shift key and the window 
+  // width is greater than 800px, handle the chat
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+
+</script>
     </div>
   </body>
   
