@@ -30,7 +30,8 @@
         src="assets/images/search.png"
         alt="search"
         class="icon icon-searcher"
-        onclick="performSearch()"/>
+        id="myButton"
+        onclick="performSear()"/>
         <input type="text" id="searchInput" placeholder="Search places" class="search" />
         <% if (profileImagePath) { %>
           <img src="<%= profileImagePath %>" id="profile-button" alt="avatar" class="avatar" onclick="window.location.href='/profile';" >

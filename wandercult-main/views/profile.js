@@ -158,3 +158,23 @@ document.getElementById('profile-form').addEventListener('submit', function(even
     this.submit(); // Allow the form to be submitted after updating local storage
 });
 
+function performSear(){
+    const searchInput = document.getElementById("searchInput").value.trim().toLowerCase();
+    window.location.href = `/home`;
+    const filteredCities = allCities.filter((city) =>
+      city.city.toLowerCase().startsWith(searchInput)
+    );
+    displayCities(filteredCities);
+  }
+
+  
+  window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("searchInput").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); 
+        console.log("Enter pressed, triggering click.");
+        document.getElementById("myButton").click(); 
+      }
+    });
+  });
+  

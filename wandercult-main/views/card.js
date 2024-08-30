@@ -8,14 +8,70 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); 
+      console.log("Enter pressed, triggering click.");
+      document.getElementById("savebut").click(); 
+    }
+  });
+});
+
 const container = document.getElementById("bottom");
 let allCities = [];
 
-function performSearch() {
-  const searchInput = document.getElementById("searchInput").value;
-  window.location.href = `/home?search=${encodeURIComponent(searchInput)}`;
+function performSear(){
+  const searchInput = document.getElementById("searchInput").value.trim().toLowerCase();
+  window.location.href = `/home`;
+  const filteredCities = allCities.filter((city) =>
+    city.city.toLowerCase().startsWith(searchInput)
+  );
+  displayCities(filteredCities);
 }
 
+
+
+function performSearch() {
+  fetch("/api/saved-cities")
+    .then((response) => response.json())
+    .then((data) => {
+      const searchInput = document.getElementById("searchInput").value.trim().toLowerCase();
+      console.log(searchInput);
+      const container = document.getElementById("right");
+      if (!container) {
+        return;
+      }
+
+      // Clear the container before adding new cards
+      container.innerHTML = "";
+
+      // Filter cities based on the search input
+      const filteredCities = data.filter((city) => {
+        return city.title && city.title.toLowerCase().startsWith(searchInput);
+      });
+
+      // Display message if no cities are found
+      if (filteredCities.length === 0) {
+        container.innerHTML = `<p class="notfound">No cities found.</p>`;
+        return;
+      }
+
+      // Add filtered cities to the container
+      filteredCities.forEach((city) => {
+        container.innerHTML += `
+          <div class="card">
+            <img src='${city.image}' alt="card-image" class="card-image" onclick="goToCityInfo('${escapeQuotes(city.title)}', '${escapeQuotes(city.adminname)}', '${escapeQuotes(city.population)}', '${escapeQuotes(city.image)}','${escapeQuotes(city.image1)}','${escapeQuotes(city.image2)}','${escapeQuotes(city.image3)}','${escapeQuotes(city.image4)}', '${escapeQuotes(city.description)}', '${escapeQuotes(city.arnques)}','${escapeQuotes(city.arnques2)}','${escapeQuotes(city.arnques3)}','${escapeQuotes(city.arnques4)}','${escapeQuotes(city.arnques5)}','${escapeQuotes(city.lat)}','${escapeQuotes(city.lng)}')"/>
+            <div class="cardText">
+              <h2>${city.title}</h2>
+            </div>
+            <button onclick="unsaveCity('${escapeQuotes(city.title)}')">Unsave</button>
+          </div>
+        `;
+      });
+    })
+    .catch((error) => console.error("Error fetching saved cities:", error));
+}
 
 
 
