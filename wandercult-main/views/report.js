@@ -63,3 +63,17 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(cities); // For testing purposes
   }
 });
+
+function performSear(){
+  window.location.href = `/home`;
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); 
+      console.log("Enter pressed, triggering click.");
+      document.getElementById("myButton").click(); 
+    }
+  });
+});

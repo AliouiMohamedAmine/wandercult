@@ -110,7 +110,14 @@ header {
   width: 250px;
   height: 35px;
 }
-
+.notfound{
+  font-family: "poppins";
+  margin-top: 200px;
+  margin-left: 400px;
+  width: 400px;
+  font-size: 50px;
+  align-items: center;
+}
 .avatar {
   width: 35px;
   height: 35px;
