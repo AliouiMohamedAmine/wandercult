@@ -254,6 +254,7 @@
     <button class="chatbot-toggler">
       <span class="material-symbols-rounded">mode_comment</span>
       <span class="material-symbols-outlined">close</span>
+      <div class="info-card">Talk to WandyBot</div>
     </button>
     <div class="chatbot">
       <header>
@@ -272,6 +273,26 @@
       </div>
     </div>
   </body>
+
+  <script>
+    const chatbotToggle = document.querySelector(".chatbot-toggler");
+const infoCard = document.querySelector(".info-card");
+const closeBt = document.querySelector(".close-btn");
+
+chatbotToggle.addEventListener("mouseover", function() {
+  if (!document.body.classList.contains("show-chatbot")) {
+    infoCard.style.display = "block";
+  }
+});
+
+chatbotToggle.addEventListener("mouseout", function() {
+  infoCard.style.display = "none";
+});
+
+
+  </script>
+
+
   <script src="card.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", function() {

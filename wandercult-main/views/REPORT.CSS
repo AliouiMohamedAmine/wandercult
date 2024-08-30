@@ -315,7 +315,7 @@ body{
   position: fixed;
 }
 
-ul {
+.left ul {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -324,24 +324,24 @@ ul {
   align-items: start;
 }
 
-ul li {
+.left ul li {
   margin: 20px 0;
   list-style: none;
 }
-ul li a {
+.left ul li a {
   text-decoration: none;
   color: #4a4a4a;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
 }
-ul img {
+.left ul img {
   scale: 0.6;
   display: inline;
   opacity: 0.7;
 }
 
-span {
+.left span {
   width: 100%;
   display: flex;
   padding-left: 10px;
@@ -350,7 +350,7 @@ span {
   gap: -50px;
   cursor: pointer;
 }
-span:hover {
+.left span:hover {
   background-color: #f5f5f5;
   border-radius: 15px;
 }
@@ -388,6 +388,23 @@ span:hover {
   width: 100%;
 }
 
+.intro{
+  width: 600px;
+  height: 150px;
+  margin-left: 230px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; 
+  font-size: 25px;
+  font-weight: 700;
+  -webkit-backdrop-filter: blur(30px); /* Blur effect for Safari 9+ and iOS 9+ */
+  backdrop-filter: blur(30px); /* Blur effect */;
+}
 
 
 
@@ -400,17 +417,23 @@ span:hover {
   align-items: center;
   min-height: 80vh;
   padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .report-card {
   background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 30px;
   max-width: 600px;
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.report-card:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .report-card::before {
@@ -450,11 +473,20 @@ form {
   color: #555;
 }
 
-.form-row input, .form-row textarea {
+.form-row textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-row input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -470,7 +502,7 @@ form {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s, transform 0.3s;
@@ -483,4 +515,300 @@ form {
 
 #submitButton:active {
   background: linear-gradient(135deg, #388e3c, #5aaf5f);
+}
+
+/* Dark Mode Styles */
+body.dark-mode #reportCardSection {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .report-card {
+  background: linear-gradient(135deg, #2e2e2e, #3a3a3a);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .report-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .report-card::before {
+  background: rgba(0, 123, 255, 0.3);
+}
+
+body.dark-mode .report-card-title {
+  color: #f1f1f1;
+}
+
+body.dark-mode .form-row label {
+  color: #bbbbbb;
+}
+
+
+body.dark-mode .form-row textarea {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .form-row input:focus, 
+body.dark-mode .form-row textarea:focus {
+  border-color: #80d0ff;
+  box-shadow: 0 0 8px rgba(128, 208, 255, 0.5);
+}
+
+body.dark-mode #submitButton {
+  background: linear-gradient(135deg, #66bb6a, #81c784);
+}
+
+body.dark-mode #submitButton:hover {
+  background: linear-gradient(135deg, #55a64b, #75bb6c);
+}
+
+body.dark-mode #submitButton:active {
+  background: linear-gradient(135deg, #388e3c, #5aaf5f);
+}
+
+
+
+
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #23f027;
+  transition: all 0.2s ease;
+}
+body.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+}
+.chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child  {
+  opacity: 0;
+}
+body.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 90px;
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+  transition: all 0.1s ease;
+  z-index: 10000;
+}
+body.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.chatbot header {
+  padding: 16px 0;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #49e979;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.chatbot header span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.chatbot header h2 {
+  font-size: 1.4rem;
+  margin-left: 20px;
+}
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 300px;
+  padding: 30px 20px 100px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 25px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+.chatbox .outgoing {
+  margin: 20px 0;
+  justify-content: flex-end;
+  display: flex; /* Ensure flexbox is applied */
+}
+
+.chatbox .outgoing p {
+  max-width: 100%; /* Ensure the message does not overflow */
+  text-align: right; /* Align text inside the message to the right */
+}
+.chatbox .incoming span {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: default;
+  text-align: center;
+  line-height: 32px;
+  align-self: flex-end;
+  background: #4ae88c;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+.chatbox .chat p {
+  white-space: pre-wrap;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 75%;
+  color: #fff;
+  font-size: 0.95rem;
+  background: #4ae894;
+}
+.chatbox .incoming p {
+  border-radius: 10px 10px 10px 0;
+}
+.chatbox .chat p.error {
+  color: #721c24;
+  background: #f8d7da;
+}
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+}
+.chatbot .chat-input {
+  display: flex;
+  gap: 10px; /* Augmenter l'espace entre le champ et le bouton */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 5px 15px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: 1px solid #ccc; /* Bordure pour plus de définition */
+  border-radius: 20px; /* Coins arrondis */
+  outline: none;
+  resize: none;
+  padding: 10px; /* Espace intérieur */
+  font-size: 0.95rem;
+  transition: border-color 0.2s; /* Transition douce pour la bordure */
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+  0 32px 64px -48px rgba(0,0,0,0.5);
+
+}
+
+.chat-input textarea:focus {
+  border-color: #4ae857; /* Couleur de bordure au focus */
+}
+
+.chat-input span {
+  align-self: center;
+  color: #2bff00;
+  cursor: pointer;
+  visibility: hidden;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer le contenu */
+  background: #ffffff; /* Couleur de fond du bouton */
+  border-radius: 4px; /* Coins arrondis */
+  padding: 0 15px; /* Espace intérieur horizontal */
+  transition: background 0.2s; /* Transition douce pour le survol */
+  border-radius: 100%;
+}
+.chat-input span:hover {
+  background: #a8ffa6; /* Couleur de fond au survol */
+}
+.chat-input textarea:valid ~ span {
+  visibility: visible;
+}
+
+@media (max-width: 490px) {
+  .chatbot-toggler {
+    right: 20px;
+    bottom: 20px;
+  }
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+  .chatbot .chatbox {
+    height: 90%;
+    padding: 25px 15px 100px;
+  }
+  .chatbot .chat-input {
+    padding: 5px 15px;
+  }
+  .chatbot header span {
+    display: block;
+  }
+}
+
+.info-card {
+  display: none; /* Cacher la carte par défaut */
+  position: absolute;
+  bottom: 60px; /* Positionner la carte au-dessus du bouton */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100000000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Afficher la carte lorsque le bouton est survolé */
+body.show-chatbot .info-card {
+  display: none;
 }

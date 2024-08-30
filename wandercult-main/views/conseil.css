@@ -329,7 +329,7 @@ container {
   position: fixed;
 }
 
-ul {
+.left ul {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -338,18 +338,18 @@ ul {
   align-items: start;
 }
 
-ul li {
+.left ul li {
   margin: 20px 0;
   list-style: none;
 }
-ul li a {
+.left ul li a {
   text-decoration: none;
   color: #4a4a4a;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
 }
-ul img {
+.left ul img {
   scale: 0.6;
   display: inline;
   opacity: 0.7;
@@ -456,6 +456,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
               0 32px 64px -48px rgba(0,0,0,0.5);
   transition: all 0.1s ease;
+  z-index: 10000;
 }
 body.show-chatbot .chatbot {
   opacity: 1;
@@ -478,8 +479,9 @@ body.show-chatbot .chatbot {
   cursor: pointer;
   transform: translateY(-50%);
 }
-header h2 {
+.chatbot header h2 {
   font-size: 1.4rem;
+  margin-left: 20px;
 }
 .chatbot .chatbox {
   overflow-y: auto;
@@ -504,6 +506,12 @@ header h2 {
 .chatbox .outgoing {
   margin: 20px 0;
   justify-content: flex-end;
+  display: flex; /* Ensure flexbox is applied */
+}
+
+.chatbox .outgoing p {
+  max-width: 100%; /* Ensure the message does not overflow */
+  text-align: right; /* Align text inside the message to the right */
 }
 .chatbox .incoming span {
   width: 32px;
@@ -539,33 +547,52 @@ header h2 {
 }
 .chatbot .chat-input {
   display: flex;
-  gap: 5px;
+  gap: 10px; /* Augmenter l'espace entre le champ et le bouton */
   position: absolute;
   bottom: 0;
   width: 100%;
   background: #fff;
-  padding: 3px 20px;
+  padding: 5px 15px;
   border-top: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .chat-input textarea {
   height: 55px;
   width: 100%;
-  border: none;
+  border: 1px solid #ccc; /* Bordure pour plus de définition */
+  border-radius: 20px; /* Coins arrondis */
   outline: none;
   resize: none;
-  max-height: 180px;
-  padding: 15px 15px 15px 0;
+  padding: 10px; /* Espace intérieur */
   font-size: 0.95rem;
+  transition: border-color 0.2s; /* Transition douce pour la bordure */
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+  0 32px 64px -48px rgba(0,0,0,0.5);
+
 }
+
+.chat-input textarea:focus {
+  border-color: #4ae857; /* Couleur de bordure au focus */
+}
+
 .chat-input span {
-  align-self: flex-end;
-  color: #4ae857;
+  align-self: center;
+  color: #2bff00;
   cursor: pointer;
+  visibility: hidden;
   height: 55px;
   display: flex;
   align-items: center;
-  visibility: hidden;
-  font-size: 1.35rem;
+  justify-content: center; /* Centrer le contenu */
+  background: #ffffff; /* Couleur de fond du bouton */
+  border-radius: 4px; /* Coins arrondis */
+  padding: 0 15px; /* Espace intérieur horizontal */
+  transition: background 0.2s; /* Transition douce pour le survol */
+  border-radius: 100%;
+}
+.chat-input span:hover {
+  background: #a8ffa6; /* Couleur de fond au survol */
 }
 .chat-input textarea:valid ~ span {
   visibility: visible;
@@ -593,4 +620,26 @@ header h2 {
   .chatbot header span {
     display: block;
   }
+}
+
+
+.info-card {
+  display: none; /* Cacher la carte par défaut */
+  position: absolute;
+  bottom: 60px; /* Positionner la carte au-dessus du bouton */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100000000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Afficher la carte lorsque le bouton est survolé */
+body.show-chatbot .info-card {
+  display: none;
 }
