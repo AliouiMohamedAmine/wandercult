@@ -1,3 +1,4 @@
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -6,15 +7,32 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+.cache/
+*.pnp
+.pnp.js
+
+# Build directories
+dist/
 dist-ssr
-*.local
+build/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.*.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -22,11 +40,7 @@ dist-ssr
 *.sln
 *.sw?
 
-node_modules/
+uploads/
+views/images/
+views/assets/images/.env
 .env
-npm-debug.log
-.DS_Store
-*.local
-coverage/
-dist/
-build/
