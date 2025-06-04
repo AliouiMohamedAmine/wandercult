@@ -20,9 +20,11 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
+        working-directory: ./wandercult-main
         run: npm ci # More reliable than npm install for CI
 
       - name: Run tests
+        working-directory: ./wandercult-main
         run: npm test
         env:
           CI: true
