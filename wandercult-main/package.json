@@ -1,4 +1,15 @@
 {
+  "name": "wandercult-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@google-cloud/dialogflow": "^6.8.0",
     "bcryptjs": "^2.4.3",
@@ -14,6 +25,7 @@
     "nodemailer": "^6.9.13",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "wandercult-main": "file:"
   }
 }
