@@ -17,11 +17,10 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     cb(null, req.user._id + "-" + Date.now() + path.extname(file.originalname));
-  }
+  },
 });
 
 const upload = multer({ storage: storage });
-
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,11 +35,14 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "views")));
 
 // MongoDB connection
-mongoose.connect("mongodb://localhost:27017/auth_Wandercult", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 30000, // 30 seconds
-});
+mongoose.connect(
+  process.env.MONGO_URL || "mongodb://localhost:27017/mydatabase",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000, // 30 seconds
+  }
+);
 
 mongoose.connection.on("error", (err) => {
   console.error("MongoDB connection error:", err);
@@ -187,7 +189,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  const error = req.flash('error');
+  const error = req.flash("error");
   res.render("login", { error });
 });
 
@@ -246,7 +248,7 @@ app.get("/home", isAuthenticated, async (req, res) => {
     res.render("home", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
   } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
@@ -254,81 +256,80 @@ app.get("/home", isAuthenticated, async (req, res) => {
   }
 });
 
-
-app.get("/report", isAuthenticated, async(req, res) => {
+app.get("/report", isAuthenticated, async (req, res) => {
   try {
     const profile = await Profile.findOne({ userId: req.user._id });
 
     res.render("REPORT", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
   } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
     res.status(500).send("Erreur lors de la récupération du profil.");
   }
-  });
+});
 
-app.get("/help", isAuthenticated, async(req, res) => {
+app.get("/help", isAuthenticated, async (req, res) => {
   try {
     const profile = await Profile.findOne({ userId: req.user._id });
 
     res.render("conseils", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
-  }catch (error) {
+  } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
     res.status(500).send("Erreur lors de la récupération du profil.");
-    }
-  });
+  }
+});
 
-app.get("/settings", isAuthenticated, async(req, res) => {
+app.get("/settings", isAuthenticated, async (req, res) => {
   try {
     const profile = await Profile.findOne({ userId: req.user._id });
 
     res.render("settings", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
-  }catch (error) {
+  } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
     res.status(500).send("Erreur lors de la récupération du profil.");
-    }
-  });
+  }
+});
 
-app.get("/saved", isAuthenticated, async(req, res) => {
+app.get("/saved", isAuthenticated, async (req, res) => {
   try {
     const profile = await Profile.findOne({ userId: req.user._id });
 
     res.render("savedpage", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
-  }catch (error) {
+  } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
     res.status(500).send("Erreur lors de la récupération du profil.");
-    }
-  });
+  }
+});
 
-app.get("/cityInfo", isAuthenticated, async(req, res) => {
+app.get("/cityInfo", isAuthenticated, async (req, res) => {
   try {
     const profile = await Profile.findOne({ userId: req.user._id });
 
     res.render("city_info", {
       username: req.user.username,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
-  }catch (error) {
+  } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
     res.status(500).send("Erreur lors de la récupération du profil.");
-    }
-  });
+  }
+});
 
 app.get("/profile", isAuthenticated, async (req, res) => {
   try {
@@ -337,7 +338,7 @@ app.get("/profile", isAuthenticated, async (req, res) => {
     res.render("profile", {
       email: req.user.email,
       user: req.user,
-      profileImagePath: profile ? profile.profileImagePath : null
+      profileImagePath: profile ? profile.profileImagePath : null,
     });
   } catch (error) {
     console.error("Erreur lors de la récupération du profil :", error);
@@ -345,21 +346,21 @@ app.get("/profile", isAuthenticated, async (req, res) => {
   }
 });
 
-app.get('/accounts', async (req, res) => {
+app.get("/accounts", async (req, res) => {
   try {
     const users = await User.find({});
     const profiles = await Profile.find({});
-    
+
     // Combine user and profile information
-    const accounts = users.map(user => {
-      const profile = profiles.find(p => p.userId.equals(user._id)) || {};
+    const accounts = users.map((user) => {
+      const profile = profiles.find((p) => p.userId.equals(user._id)) || {};
       return {
         email: user.email,
         username: user.username,
-        profileImagePath: profile.profileImagePath
+        profileImagePath: profile.profileImagePath,
       };
     });
-    
+
     res.json(accounts);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -382,10 +383,9 @@ app.get("/logout", (req, res) => {
   });
 });
 
-
 const profileSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  profileImagePath: { type: String, required: true }
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  profileImagePath: { type: String, required: true },
 });
 
 const Profile = mongoose.model("Profile", profileSchema);
@@ -418,16 +418,33 @@ const savedCitySchema = new mongoose.Schema({
   arnques3: String,
   arnques4: String,
   arnques5: String,
-  lat:String,
-  lng:String,
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  lat: String,
+  lng: String,
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
 const SavedCity = mongoose.model("SavedCity", savedCitySchema);
 
 // Route to save city data
 app.post("/api/save-city", isAuthenticated, async (req, res) => {
-  const { title, adminname, population, image,image1,image2,image3,image4, description, arnques ,arnques2 ,arnques3 ,arnques4 ,arnques5 ,lat,lng} = req.body;
+  const {
+    title,
+    adminname,
+    population,
+    image,
+    image1,
+    image2,
+    image3,
+    image4,
+    description,
+    arnques,
+    arnques2,
+    arnques3,
+    arnques4,
+    arnques5,
+    lat,
+    lng,
+  } = req.body;
   try {
     const newCity = new SavedCity({
       title,
@@ -452,12 +469,11 @@ app.post("/api/save-city", isAuthenticated, async (req, res) => {
     res.status(200).json({ message: "City saved successfully!" });
   } catch (error) {
     console.error("Error saving city:", error);
-    res.status(500).json({ error: "Error saving city. Please try again later." });
+    res
+      .status(500)
+      .json({ error: "Error saving city. Please try again later." });
   }
 });
-
-
-
 
 app.post("/update-profile", isAuthenticated, async (req, res) => {
   try {
@@ -476,27 +492,31 @@ app.post("/update-profile", isAuthenticated, async (req, res) => {
   }
 });
 
+app.post(
+  "/upload-profile-pic",
+  isAuthenticated,
+  upload.single("profilePic"),
+  async (req, res) => {
+    try {
+      const profile = await Profile.findOneAndUpdate(
+        { userId: req.user._id },
+        { profileImagePath: req.file.path },
+        { new: true, upsert: true }
+      );
 
+      console.log("Chemin de l'image de profil :", req.file.path);
 
-
-app.post("/upload-profile-pic", isAuthenticated, upload.single("profilePic"), async (req, res) => {
-  try {
-    const profile = await Profile.findOneAndUpdate(
-      { userId: req.user._id },
-      { profileImagePath: req.file.path },
-      { new: true, upsert: true }
-    );
-
-    console.log("Chemin de l'image de profil :", req.file.path);
-
-    // Send back the new profile image path
-    res.json({ success: true, newProfileImagePath: req.file.path });
-  } catch (error) {
-    console.error("Erreur lors de l'upload de la photo :", error);
-    res.status(500).json({ success: false, message: "Erreur lors de l'upload de la photo." });
+      // Send back the new profile image path
+      res.json({ success: true, newProfileImagePath: req.file.path });
+    } catch (error) {
+      console.error("Erreur lors de l'upload de la photo :", error);
+      res.status(500).json({
+        success: false,
+        message: "Erreur lors de l'upload de la photo.",
+      });
+    }
   }
-});
-
+);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
@@ -516,9 +536,9 @@ app.get("/api/check-city", isAuthenticated, async (req, res) => {
   const { user } = req.query;
   try {
     const existingCity = await SavedCity.findOne({
-    title: new RegExp(`^${title}$`, "i"), // Recherche insensible à la casse
-    user: req.user._id, // L'utilisateur actuellement connecté
-     });
+      title: new RegExp(`^${title}$`, "i"), // Recherche insensible à la casse
+      user: req.user._id, // L'utilisateur actuellement connecté
+    });
     if (existingCity) {
       res.json({ exists: true });
     } else {
@@ -526,11 +546,11 @@ app.get("/api/check-city", isAuthenticated, async (req, res) => {
     }
   } catch (error) {
     console.error("Error checking city:", error);
-    res.status(500).json({ error: "Error checking city. Please try again later." });
+    res
+      .status(500)
+      .json({ error: "Error checking city. Please try again later." });
   }
 });
-
-
 
 // Route to unsave a city
 app.delete("/api/unsave-city", isAuthenticated, async (req, res) => {
@@ -539,12 +559,16 @@ app.delete("/api/unsave-city", isAuthenticated, async (req, res) => {
 
   try {
     // First, find the city
-    const city = await SavedCity.findOne({ title: new RegExp(`^${title}$`, "i") });
-    console.log("found")
-    
+    const city = await SavedCity.findOne({
+      title: new RegExp(`^${title}$`, "i"),
+    });
+    console.log("found");
+
     if (city) {
       // If the city exists, delete it
-      const deleteResult = await SavedCity.deleteOne({ title: new RegExp(`^${title}$`, "i") });
+      const deleteResult = await SavedCity.deleteOne({
+        title: new RegExp(`^${title}$`, "i"),
+      });
 
       if (deleteResult.deletedCount === 1) {
         console.log(`Successfully deleted city: ${title}`);
@@ -559,10 +583,11 @@ app.delete("/api/unsave-city", isAuthenticated, async (req, res) => {
     }
   } catch (error) {
     console.error("Error unsaving city:", error, "Title:", title);
-    res.status(500).json({ error: "Error unsaving city. Please try again later." });
+    res
+      .status(500)
+      .json({ error: "Error unsaving city. Please try again later." });
   }
 });
-
 
 // Route to add a new report
 app.post("/api/reports", (req, res) => {
