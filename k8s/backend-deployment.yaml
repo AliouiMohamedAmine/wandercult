@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: your-dockerhub-user/wandercult:latest  #changer to your Docker Hub username
+          image: aliouimohamedamine/wandercult:latest  #changer to your Docker Hub username
           ports:
             - containerPort: 3000
           env:
